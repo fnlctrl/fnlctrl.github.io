@@ -1,0 +1,76 @@
+html {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.ease-2 {
+    transition: all 0.2s ease;
+}
+.ease-5 {
+    transition: all 0.5s ease;
+}
+.view-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.view {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.crossfade.ng-enter {
+    opacity: 0;
+}
+.crossfade.ng-enter-active {
+    opacity: 1;
+}
+.nav-wrapper {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    z-index: 99;
+}
+.nav-dot {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: #fff;
+    opacity: 0.65;
+}
+.nav-dot:hover {
+    opacity: 1
+}
+.nav-dot:nth-child(n+2) {
+    margin: 20px 0 0 0;
+}
+.nav-dot-active {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.view-designs {
+    background: #0094C7;
+}
+.view-projects {
+    background: #00A156;
+}
+.view-about {
+    background: #00C4B9;
+}
+
+

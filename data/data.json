@@ -1,0 +1,18 @@
+{
+  "views": [
+    "designs",
+    "projects",
+    "about"
+  ],
+  "skills": {
+    "javascript": "3",
+    "jquery": "3",
+    "angular": "1",
+    "html/css": "4",
+    "svg": "3",
+    "python": "1",
+    "node": "1"
+  }
+}
+
+
