@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
 	<title>fnlCtrl's Portfolio</title>
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-route.min.js"></script>
@@ -11,7 +12,19 @@
 </head>
 <body ng-controller="mainCtrl as main">
 	<div class="nav-wrapper" ng-controller="navCtrl as nav">
-		<a class="nav-dot ease-2" ng-repeat="view in views" ng-class="checkActive(view)"  ng-href="#/{{view}}"></a>
+		<a class="nav-dot ease-2" ng-repeat="view in nav.views" ng-class="nav.checkActive(view)"  ng-href="#/{{view}}"></a>
+	</div>
+	<div class="sidebar-wrapper font-hei" ng-controller="sidebarCtrl as sidebar" ng-class="sidebar.state">
+		<div class="sidebar-header">
+			<img class="sidebar-header-avatar ease-2" ng-click="sidebar.toggle()" src="img/avatar.jpg"/>
+			<div class="sidebar-header-contacts">
+				<span>fnlCtrl</span>
+				fnlctrl@gmail.com
+				<a href="http://github.com/fnlctrl"><img src="img/icon-github.svg"></a>
+				<a href="http://www.zhihu.com/people/fnlctrl"><img src="img/icon-zhihu.svg"></a>
+				<a href="http://google.com/+宋铄运"><img src="img/icon-gplus.svg"></a>
+			</div>
+		</div>
 	</div>
 	<div ng-view class="view-container crossfade ease-5"></div>
 </body>

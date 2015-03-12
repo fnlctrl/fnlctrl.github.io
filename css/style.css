@@ -1,3 +1,4 @@
+/*general*/
 html {
     position: absolute;
     height: 100%;
@@ -15,6 +16,8 @@ body {
 .ease-5 {
     transition: all 0.5s ease;
 }
+
+/*view*/
 .view-container {
     position: absolute;
     top: 0;
@@ -29,12 +32,25 @@ body {
     height: 100%;
     width: 100%;
 }
+.view-designs {
+    background: #0094C7;
+}
+.view-projects {
+    background: #00A156;
+}
+.view-about {
+    background: #00C4B9;
+}
+
+/*ngAnimate*/
 .crossfade.ng-enter {
     opacity: 0;
 }
 .crossfade.ng-enter-active {
     opacity: 1;
 }
+
+/*nav*/
 .nav-wrapper {
     position: absolute;
     width: auto;
@@ -63,14 +79,33 @@ body {
     transform: scale(1.2);
     opacity: 1;
 }
-.view-designs {
-    background: #0094C7;
-}
-.view-projects {
-    background: #00A156;
-}
-.view-about {
-    background: #00C4B9;
-}
 
+/*sidebar*/
+.sidebar-wrapper {
+    position: absolute;
+    padding: 32px;
+    box-sizing: border-box;
+    height: 100%;
+    right: 0;
+    z-index: 99;
+}
+.sidebar-header {
+    position: relative;
+}
+.sidebar-header-contacts {
 
+}
+.sidebar-header-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 9999px;
+    padding: 10px;
+    cursor: pointer;
+    background: rgba(255,255,255,.6);
+    box-sizing: border-box;
+}
+.sidebar-avatar:hover {
+    background: rgba(255,255,255,.8);
+    padding: 8px;
+    transform: scale(1.1);
+}
