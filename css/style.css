@@ -4,17 +4,35 @@ html {
     height: 100%;
     width: 100%;
 }
+
 body {
     position: relative;
     height: 100%;
     width: 100%;
     margin: 0;
 }
+
 .ease-2 {
     transition: all 0.2s ease;
 }
+
+.ease-3 {
+    transition: all 0.3s ease;
+}
+
 .ease-5 {
     transition: all 0.5s ease;
+}
+
+.copyright {
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    color: #000;
+    opacity: 0.5;
+    font-size: 12px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /*view*/
@@ -25,6 +43,7 @@ body {
     height: 100%;
     width: 100%;
 }
+
 .view {
     position: relative;
     top: 0;
@@ -32,12 +51,15 @@ body {
     height: 100%;
     width: 100%;
 }
+
 .view-designs {
     background: #0094C7;
 }
+
 .view-projects {
     background: #00A156;
 }
+
 .view-about {
     background: #00C4B9;
 }
@@ -46,6 +68,7 @@ body {
 .crossfade.ng-enter {
     opacity: 0;
 }
+
 .crossfade.ng-enter-active {
     opacity: 1;
 }
@@ -60,6 +83,7 @@ body {
     left: 40px;
     z-index: 99;
 }
+
 .nav-dot {
     display: block;
     position: relative;
@@ -69,18 +93,21 @@ body {
     background: #fff;
     opacity: 0.65;
 }
+
 .nav-dot:hover {
     opacity: 1
 }
+
 .nav-dot:nth-child(n+2) {
     margin: 20px 0 0 0;
 }
+
 .nav-dot-active {
     transform: scale(1.2);
     opacity: 1;
 }
 
-/*sidebar*/
+/*sidebar normal*/
 .sidebar-wrapper {
     position: absolute;
     padding: 32px;
@@ -88,24 +115,136 @@ body {
     height: 100%;
     right: 0;
     z-index: 99;
+    color: #fff;
+    width: 148px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+.sidebar-section {
+    opacity: 0;
+    margin: 3vh 0 0 0;
+    width: 256px;
+    pointer-events: none;
+}
+
 .sidebar-header {
     position: relative;
+    height: 84px;
 }
-.sidebar-header-contacts {
 
-}
 .sidebar-header-avatar {
     width: 84px;
     height: 84px;
     border-radius: 9999px;
     padding: 10px;
     cursor: pointer;
-    background: rgba(255,255,255,.6);
+    background: rgba(255, 255, 255, .6);
     box-sizing: border-box;
 }
-.sidebar-avatar:hover {
-    background: rgba(255,255,255,.8);
+
+.sidebar-header-avatar:hover {
+    background: rgba(255, 255, 255, .8);
     padding: 8px;
     transform: scale(1.1);
+}
+
+.sidebar-header-contacts {
+    position: absolute;
+    left: 100px;
+    height: 84px;
+    width: 160px;
+    top: 0;
+    opacity: 0;
+}
+
+.sidebar-header-contacts h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 3px 0 3px 0;
+}
+
+.sidebar-header-contacts a {
+    display: inline-block;
+    position: relative;
+    margin: 10px 6px 0 0;
+    opacity: 0.8;
+}
+
+.sidebar-header-contacts a:hover {
+    opacity: 1;
+}
+
+.sidebar-about {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.sidebar-about p {
+    font-size: 14px;
+    margin: 4px 0 0 0;
+    font-weight: 400;
+}
+.sidebar-skills h1 {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0 0 12px 0;
+}
+.sidebar-skills-item {
+    height: 30px;
+    margin: 0 0 12px 0;
+    position: relative;
+}
+.sidebar-skills-item-stars-container {
+    width: 120px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sidebar-skills-item-stars-container:after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/icon-star.svg);
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: block;
+    top:0;
+}
+.sidebar-skills-item-stars {
+    background-image: url(../img/icon-star.svg);
+    height: 100%;
+    width: 0;
+}
+.sidebar-skills-item-stars-overlay {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+.sidebar-skills-item:hover .sidebar-skills-item-stars-overlay {
+    opacity: 1;
+}
+/*sidebar active*/
+.sidebar-active {
+    width: 320px;
+    background: rgba(0, 0, 0, .2);
+}
+
+.sidebar-active .sidebar-section {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar-active .sidebar-header-avatar {
+    padding: 0;
+}
+
+.sidebar-active .sidebar-header-contacts {
+    opacity: 1;
 }
