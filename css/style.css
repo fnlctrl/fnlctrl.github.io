@@ -13,15 +13,23 @@ body {
 }
 
 .ease-2 {
-    transition: all 0.2s ease;
+    transition: width 0.2s, opacity 0.2s, background 0.2s, transform 0.2s, fill 0.2s;
+    transition-timing-function: ease;
+}
+
+.ease-out-2 {
+    transition: width 0.2s, opacity 0.2s, background 0.2s, transform 0.2s, fill 0.2s;
+    transition-timing-function: ease-out;
 }
 
 .ease-3 {
-    transition: all 0.3s ease;
+    transition: width 0.3s, opacity 0.3s, background 0.3s, transform 0.3s, fill 0.3s;
+    transition-timing-function: ease;
 }
 
 .ease-5 {
-    transition: all 0.5s ease;
+    transition: width 0.5s, opacity 0.5s, background 0.5s, transform 0.5s, fill 0.5s;
+    transition-timing-function: ease;
 }
 
 .copyright {
@@ -185,51 +193,76 @@ body {
 
 .sidebar-about p {
     font-size: 14px;
-    margin: 4px 0 0 0;
+    margin: 0;
     font-weight: 400;
 }
+
 .sidebar-skills h1 {
     font-weight: 500;
     font-size: 24px;
-    margin: 0 0 12px 0;
+    margin: 0 0 6px 0;
 }
+
 .sidebar-skills-item {
     height: 30px;
-    margin: 0 0 12px 0;
+    padding: 4px 0;
     position: relative;
+    font-size: 12px;
 }
+
 .sidebar-skills-item-stars-container {
-    width: 120px;
+    width: 125px;
     height: 24px;
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%)
 }
+
 .sidebar-skills-item-stars-container:after {
     content: '';
     position: absolute;
     background-image: url(../img/icon-star.svg);
     opacity: 0.2;
     height: 100%;
-    width: 100%;
+    width: 125px;
     z-index: -1;
     display: block;
-    top:0;
+    top: 0;
 }
+
+.sidebar-skills-item-stars-wrapper {
+    height: 100%;
+    width: 125px;
+}
+
 .sidebar-skills-item-stars {
-    background-image: url(../img/icon-star.svg);
+    overflow: hidden;
     height: 100%;
     width: 0;
 }
-.sidebar-skills-item-stars-overlay {
-    opacity: 0;
-    height: 100%;
-    width: 100%;
+
+.sidebar-skills-item-alias {
+    position: absolute;
+    display: block;
+    border: 2px solid #fff;
+    line-height: 27px;
+    box-sizing: border-box;
 }
+
+.sidebar-skills-item:hover .sidebar-skills-item-alias {
+    border: 0;
+    line-height: 30px;
+    color: rgba(0,0,0,.8);
+}
+.sidebar-skills-item:hover .rectangle {
+    padding: 0 8px;
+}
+
 .sidebar-skills-item:hover .sidebar-skills-item-stars-overlay {
     opacity: 1;
 }
+
 /*sidebar active*/
 .sidebar-active {
     width: 320px;
@@ -247,4 +280,18 @@ body {
 
 .sidebar-active .sidebar-header-contacts {
     opacity: 1;
+}
+
+/*shapes*/
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    text-align: center;
+}
+
+.rectangle {
+    height: 30px;
+    text-align: center;
+    padding: 0 6px;
 }

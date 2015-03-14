@@ -25,7 +25,7 @@
       "star":"5",
       "style":{
         "shape":"circle",
-        "color":"#25C8F2"
+        "color":"FF7C19"
       }
     },
     {
@@ -34,7 +34,7 @@
       "star":"5",
       "style":{
         "shape":"circle",
-        "color":"#25C8F2"
+        "color":"FF3E8A"
       }
     },
     {
@@ -43,7 +43,7 @@
       "star":"3.5",
       "style":{
         "shape":"circle",
-        "color":"#25C8F2"
+        "color":"25C8F2"
       }
     },
     {
@@ -51,8 +51,8 @@
       "alias":"SVG",
       "star":"3",
       "style":{
-        "shape":"square",
-        "color":"#25C8F2"
+        "shape":"rectangle",
+        "color":"FEB127"
       }
     },
     {
@@ -60,8 +60,8 @@
       "alias":"JavaScript",
       "star":"3.5",
       "style":{
-        "shape":"square",
-        "color":"#25C8F2"
+        "shape":"rectangle",
+        "color":"F0DB4F"
       }
     },
     {
@@ -69,8 +69,8 @@
       "alias":"jQuery",
       "star":"3.5",
       "style":{
-        "shape":"square",
-        "color":"#25C8F2"
+        "shape":"rectangle",
+        "color":"25C8F2"
       }
     },
     {
@@ -79,16 +79,16 @@
       "star":"2",
       "style":{
         "shape":"shield",
-        "color":"#25C8F2"
+        "color":"25C8F2"
       }
     },
     {
       "name":"php",
       "alias":"PHP",
-      "star":"1",
+      "star":"2",
       "style":{
-        "shape":"square",
-        "color":"#25C8F2"
+        "shape":"rectangle",
+        "color":"25C8F2"
       }
     },
     {
@@ -96,8 +96,8 @@
       "alias":"Python",
       "star":"0.5",
       "style":{
-        "shape":"square",
-        "color":"#25C8F2"
+        "shape":"rectangle",
+        "color":"25C8F2"
       }
     },
     {
@@ -106,7 +106,7 @@
       "star":"0.5",
       "style":{
         "shape":"hexagon",
-        "color":"#25C8F2"
+        "color":"25C8F2"
       }
     }
   ]
