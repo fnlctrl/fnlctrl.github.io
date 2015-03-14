@@ -13,22 +13,22 @@ body {
 }
 
 .ease-2 {
-    transition: padding 0.2s, width 0.2s, opacity 0.2s, background 0.2s, transform 0.2s, fill 0.2s;
+    transition: all 0.2s;
     transition-timing-function: ease;
 }
 
 .ease-out-2 {
-    transition: padding 0.2s, width 0.2s, opacity 0.2s, background 0.2s, transform 0.2s, fill 0.2s;
+    transition: all 0.2s;
     transition-timing-function: ease-out;
 }
 
 .ease-3 {
-    transition: padding 0.3s, width 0.3s, opacity 0.3s, background 0.3s, transform 0.3s, fill 0.3s;
+    transition: all 0.3s;
     transition-timing-function: ease;
 }
 
 .ease-5 {
-    transition: padding 0.5s, width 0.5s, opacity 0.5s, background 0.5s, transform 0.5s, fill 0.5s;
+    transition: all 0.5s;
     transition-timing-function: ease;
 }
 
@@ -199,7 +199,7 @@ body {
 
 .sidebar-skills h1 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0 0 6px 0;
 }
 
@@ -231,24 +231,12 @@ body {
     top: 0;
 }
 
-.sidebar-skills-item-stars-wrapper {
-    height: 100%;
-    width: 125px;
-}
-
-.sidebar-skills-item-stars {
-    overflow: hidden;
-    height: 100%;
-    width: 0;
-}
-
 .sidebar-skills-item-alias {
     position: absolute;
     display: block;
     border: 2px solid #fff;
     line-height: 27px;
     box-sizing: border-box;
-    margin: 0 0 0 12px;
 }
 
 .sidebar-skills-item:hover .sidebar-skills-item-alias {
@@ -256,11 +244,11 @@ body {
     line-height: 30px;
 }
 .sidebar-skills-item:hover .rectangle {
-    padding: 0 8px;
+    padding: 0 7px;
 }
-
-.sidebar-skills-item:hover .sidebar-skills-item-stars-overlay {
-    opacity: 1;
+.sidebar-skills-item:hover .sidebar-skills-item-stars-container {
+    transform: scale(1.05) translateY(-50%);
+    transform-origin: 50% 50%;
 }
 
 /*sidebar active*/

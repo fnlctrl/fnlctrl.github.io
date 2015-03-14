@@ -41,7 +41,7 @@
 			}
 		})
 		.controller('mainCtrl', function () {
-			//not currently needed
+			//not implemented
 		})
 		.controller('navCtrl', function ($scope, $location, dataService) {
 			var self = this;

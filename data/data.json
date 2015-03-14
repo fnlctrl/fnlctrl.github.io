@@ -88,7 +88,7 @@
       "star":"2",
       "style":{
         "shape":"rectangle",
-        "color":"8892bf"
+        "color":"805B8E"
       }
     },
     {
@@ -97,7 +97,7 @@
       "star":"0.5",
       "style":{
         "shape":"rectangle",
-        "color":"407fb0"
+        "color":"24A0FF"
       }
     },
     {
@@ -107,6 +107,15 @@
       "style":{
         "shape":"rectangle",
         "color":"80BD01"
+      }
+    },
+    {
+      "name":"git",
+      "alias":"git",
+      "star":"3",
+      "style":{
+        "shape":"rectangle",
+        "color":"F44D27"
       }
     }
   ]
