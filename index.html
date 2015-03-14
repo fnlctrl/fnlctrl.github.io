@@ -10,14 +10,14 @@
 	<script src="js/angular-animate.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body ng-controller="mainCtrl as main">
-	<div class="copyright font-hei">
+<body ng-controller="mainCtrl as main" class="font-hei">
+	<div class="copyright">
 		Copyright (C) 2014-2015 SongShuoyun. All rights reserved.
 	</div>
 	<div class="nav-wrapper" ng-controller="navCtrl as nav">
-		<a class="nav-dot ease-2" ng-repeat="view in nav.views" ng-class="nav.checkActive(view)"  ng-href="#/{{view}}"></a>
+		<a class="nav-dot ease-2" ng-repeat="view in nav.views" ng-class="nav.checkActive(view)" ng-href="#/{{view}}"><span class="nav-dot-hint ease-out-2">{{ view }}</span></a>
 	</div>
-	<div class="sidebar-wrapper font-hei ease-5" ng-controller="sidebarCtrl as sidebar" ng-class="sidebar.state">
+	<div class="sidebar-wrapper ease-5" ng-controller="sidebarCtrl as sidebar" ng-class="sidebar.state">
 		<div class="sidebar-header">
 			<img class="sidebar-header-avatar ease-3" ng-click="sidebar.toggle()" src="img/avatar.jpg"/>
 			<div class="sidebar-header-contacts ease-2">

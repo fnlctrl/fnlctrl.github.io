@@ -1,15 +1,6 @@
 (function () {
-	function uniqueArray(arr) {
-		ret = [];
-		arr.forEach(function (item, index) {
-			if (ret.indexOf(item) === -1) {
-				ret.push(item)
-			}
-		});
-		return ret;
-	}
-
-	var app = angular.module('portfolio', ['ngRoute', 'ngAnimate'])
+	var app = angular
+		.module('portfolio', ['ngRoute', 'ngAnimate'])
 		.config(function ($routeProvider) {
 			$routeProvider
 				.when('/:view', {
@@ -48,7 +39,8 @@
 			dataService.getItems().then(function (data) {
 				self.views = data['views'];
 			});
-			self.checkActive = function (path) {
+			self.checkActive = checkActive;
+			function checkActive(path) {
 				if ($location.path().substr(1, path.length) == path) {
 					return 'nav-dot-active'
 				} else {
@@ -60,6 +52,8 @@
 			var self = this;
 			var colors = [];
 			var shapes = [];
+			self.state = '';
+			self.toggle = toggle;
 			dataService.getItems().then(function (data) {
 				self.contacts = data['contacts'];
 				self.skills = data['skills'];
@@ -74,33 +68,45 @@
 					})
 				);
 			}).then(function () {
-				self.getSkillStyle = function () {
-					return colors.map(function (color) {
-						var arr = shapes.map(function (shape) {
-							return [
-								'._', color, ':hover .', shape, '{ ',
-								'background: #', color,
-								' }'
-							].join('');
-						});
-						arr.push(
-							[
-								'._', color, ':hover path { ',
-								'fill: #', color,
-								' }'
-							].join('')
-						);
-						return arr.join('\n')
-					}).join('\n');
-				};
+				self.getSkillStyle = getSkillStyle;
 			});
-			self.state = '';
-			self.toggle = function () {
+
+			function toggle() {
 				if (self.state == '') {
 					self.state = 'sidebar-active'
 				} else {
 					self.state = ''
 				}
-			};
+			}
+
+			function uniqueArray(arr) {
+				ret = [];
+				arr.forEach(function (item, index) {
+					if (ret.indexOf(item) === -1) {
+						ret.push(item)
+					}
+				});
+				return ret;
+			}
+
+			function getSkillStyle() {
+				return colors.map(function (color) {
+					var arr = shapes.map(function (shape) {
+						return [
+							'._', color, ':hover .', shape, '{ ',
+							'background: #', color,
+							' }'
+						].join('');
+					});
+					arr.push(
+						[
+							'._', color, ':hover path { ',
+							'fill: #', color,
+							' }'
+						].join('')
+					);
+					return arr.join('\n')
+				}).join('\n');
+			}
 		})
 })();

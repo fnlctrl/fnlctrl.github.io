@@ -3,6 +3,7 @@ html {
     position: absolute;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -43,35 +44,6 @@ body {
     transform: translateX(-50%);
 }
 
-/*view*/
-.view-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.view {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.view-designs {
-    background: #0094C7;
-}
-
-.view-projects {
-    background: #00A156;
-}
-
-.view-about {
-    background: #00C4B9;
-}
-
 /*ngAnimate*/
 .crossfade.ng-enter {
     opacity: 0;
@@ -83,7 +55,7 @@ body {
 
 /*nav*/
 .nav-wrapper {
-    position: absolute;
+    position: fixed;
     width: auto;
     height: auto;
     top: 50%;
@@ -106,6 +78,10 @@ body {
     opacity: 1
 }
 
+.nav-dot:hover .nav-dot-hint {
+    opacity: 1
+}
+
 .nav-dot:nth-child(n+2) {
     margin: 20px 0 0 0;
 }
@@ -113,6 +89,15 @@ body {
 .nav-dot-active {
     transform: scale(1.2);
     opacity: 1;
+}
+
+.nav-dot-hint {
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    left: 28px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /*sidebar normal*/
@@ -282,4 +267,64 @@ body {
     height: 30px;
     text-align: center;
     padding: 0 6px;
+}
+/*view*/
+.view-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.view {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    padding: 30px 30px 40px 80px;
+    box-sizing: border-box;
+}
+
+.view-designs {
+    background: #0094C7;
+}
+
+.view-projects {
+    background: #00C267;
+}
+
+.view-resume {
+    background: #00C4B9;
+}
+
+.view-header {
+    font-size: 18px;
+    height: 100px;
+}
+.view-header h1{
+    font-size: 60px;
+    font-weight: 200;
+    margin: 10px 0 0 0;
+}
+.view-header hr {
+    border: 1px solid rgba(255,255,255,0.6);
+}
+.view-title {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+.view-description {
+    display: inline-block;
+    font-size: 14px;
+}
+.view-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -100px;
+    padding: 130px 0 0 0;
+    box-sizing: border-box;
 }
