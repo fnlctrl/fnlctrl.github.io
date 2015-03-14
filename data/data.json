@@ -70,7 +70,7 @@
       "star":"3.5",
       "style":{
         "shape":"rectangle",
-        "color":"25C8F2"
+        "color":"7BD6FD"
       }
     },
     {
@@ -78,8 +78,8 @@
       "alias":"AngularJS",
       "star":"2",
       "style":{
-        "shape":"shield",
-        "color":"25C8F2"
+        "shape":"rectangle",
+        "color":"DD1B16"
       }
     },
     {
@@ -88,7 +88,7 @@
       "star":"2",
       "style":{
         "shape":"rectangle",
-        "color":"25C8F2"
+        "color":"8892bf"
       }
     },
     {
@@ -97,7 +97,7 @@
       "star":"0.5",
       "style":{
         "shape":"rectangle",
-        "color":"25C8F2"
+        "color":"407fb0"
       }
     },
     {
@@ -105,8 +105,8 @@
       "alias":"Node.js",
       "star":"0.5",
       "style":{
-        "shape":"hexagon",
-        "color":"25C8F2"
+        "shape":"rectangle",
+        "color":"80BD01"
       }
     }
   ]

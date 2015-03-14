@@ -1,4 +1,14 @@
 (function () {
+	function uniqueArray(arr) {
+		ret = [];
+		arr.forEach(function (item, index) {
+			if (ret.indexOf(item) === -1) {
+				ret.push(item)
+			}
+		});
+		return ret;
+	}
+
 	var app = angular.module('portfolio', ['ngRoute', 'ngAnimate'])
 		.config(function ($routeProvider) {
 			$routeProvider
@@ -53,33 +63,37 @@
 			dataService.getItems().then(function (data) {
 				self.contacts = data['contacts'];
 				self.skills = data['skills'];
-				colors = self.skills.map(function (obj) {
-					return obj.style.color
-				});
-				shapes = self.skills.map(function (obj) {
-					return obj.style.shape
-				});
+				colors = uniqueArray(
+					self.skills.map(function (obj) {
+						return obj.style.color
+					})
+				);
+				shapes = uniqueArray(
+					self.skills.map(function (obj) {
+						return obj.style.shape
+					})
+				);
+			}).then(function () {
+				self.getSkillStyle = function () {
+					return colors.map(function (color) {
+						var arr = shapes.map(function (shape) {
+							return [
+								'._', color, ':hover .', shape, '{ ',
+								'background: #', color,
+								' }'
+							].join('');
+						});
+						arr.push(
+							[
+								'._', color, ':hover path { ',
+								'fill: #', color,
+								' }'
+							].join('')
+						);
+						return arr.join('\n')
+					}).join('\n');
+				};
 			});
-			self.getSkillStyle = function () {
-				return colors.map(function(color){
-					return shapes.map(function(shape){
-						return [
-							'._',color,':hover .',shape,'{',
-								'background: #',color,
-							'}'
-						].join('');
-					}).append(
-						[
-							'._',color,':hover path {',
-							'fill: #',color,
-							'}'
-						].join('')
-					).join('\n')
-				});
-
-				//._{{skill.style.color}}:hover path { fill: #{{ skill.style.color }} }
-				//._{{skill.style.color}}:hover .{{skill.style.shape}} { background: #{{ skill.style.color }} }
-			};
 			self.state = '';
 			self.toggle = function () {
 				if (self.state == '') {

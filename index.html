@@ -38,10 +38,6 @@
 				{{ sidebar.getSkillStyle() }}
 			</style>
 			<div class="sidebar-skills-item" ng-class="'_'+skill.style.color" ng-repeat="skill in sidebar.skills">
-				<style>
-					._{{skill.style.color}}:hover path { fill: #{{ skill.style.color }} }
-					._{{skill.style.color}}:hover .{{skill.style.shape}} { background: #{{ skill.style.color }} }
-				</style>
 				<span class="sidebar-skills-item-alias ease-2" ng-class="skill.style.shape">{{ skill.alias }}</span>
 				<div class="sidebar-skills-item-stars-container">
 					<div class="sidebar-skills-item-stars" ng-style="{{ {'width':skill.star/5*100+'%'} }}">
