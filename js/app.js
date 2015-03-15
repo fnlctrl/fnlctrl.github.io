@@ -22,17 +22,23 @@
 						storageDefer.resolve(storage);
 					}
 					else {
-						$http.get('data/data.json').success(function (data) {
-							storage = data;
-							storageDefer.resolve(data)
+						data = $http.get('data/data.json');
+						resume = $http.get('data/resume.json');
+						$q.all([data,resume]).then(function(resultArr){
+							storage = resultArr[0].data;
+							storage.resume = resultArr[1].data;
+							storageDefer.resolve(storage);
 						});
 					}
 					return storageDefer.promise;
 				}
 			}
 		})
-		.controller('mainCtrl', function () {
-			//not implemented
+		.controller('mainCtrl', function (dataService) {
+			var self = this;
+			dataService.getItems().then(function (data) {
+				self.resume = data['resume'];
+			});
 		})
 		.controller('navCtrl', function ($scope, $location, dataService) {
 			var self = this;
@@ -109,4 +115,7 @@
 				}).join('\n');
 			}
 		})
+
+	var a = '\\'
+	console.log(a)
 })();

@@ -103,13 +103,13 @@ body {
 /*sidebar normal*/
 .sidebar-wrapper {
     position: absolute;
-    padding: 32px;
+    padding: 30px;
     box-sizing: border-box;
     height: 100%;
     right: 0;
     z-index: 99;
     color: #fff;
-    width: 148px;
+    width: 144px;
     overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -137,12 +137,16 @@ body {
     cursor: pointer;
     background: rgba(255, 255, 255, .6);
     box-sizing: border-box;
+    -webkit-animation: glow 1.5s ease 0s infinite;
+    animation: glow 1.5s ease 0s infinite;
 }
 
 .sidebar-header-avatar:hover {
     background: rgba(255, 255, 255, .8);
     padding: 8px;
     transform: scale(1.1);
+    -webkit-animation: none;
+    animation: none;
 }
 
 .sidebar-header-contacts {
@@ -241,6 +245,9 @@ body {
     width: 320px;
     background: rgba(0, 0, 0, .2);
 }
+.sidebar-active + .view-container {
+
+}
 
 .sidebar-active .sidebar-section {
     opacity: 1;
@@ -302,15 +309,20 @@ body {
 
 .view-header {
     font-size: 18px;
-    height: 100px;
+    height: 110px;
+    position: relative;
 }
 .view-header h1{
     font-size: 60px;
+    height: 80px;
     font-weight: 200;
-    margin: 10px 0 0 0;
+    margin: 0;
 }
 .view-header hr {
     border: 1px solid rgba(255,255,255,0.6);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .view-title {
     display: inline-block;
@@ -324,7 +336,30 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    top: -100px;
-    padding: 130px 0 0 0;
+    top: -110px;
+    padding: 110px 0 0 0;
     box-sizing: border-box;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: inset 0 0 70px 0 #fff;
+    }
+    100% {
+        box-shadow: 0;
+    }
+}
+@-webkit-keyframes glow {
+    0% {
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: inset 0 0 70px 10px #fff;
+    }
+    100% {
+        box-shadow: 0;
+    }
 }

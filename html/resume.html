@@ -9,4 +9,18 @@
 		</span>
 		<hr>
 	</div>
+	<div class="view-content">
+		<div class="resume-container">
+			<div class="resume-section" ng-repeat="section in main.resume">
+				<h1 class="resume-section-title">{{ section.title }}</h1>
+				<div class="resume-section-item" ng-repeat="item in section.items">
+					<h3>{{ item.place }}</h3>
+					<h3 class="resume-section-item-name">{{ item.job || item.name }}</h3>
+					<h3 class="resume-section-item-time">{{ item.time }}</h3>
+					<div class="resume-section-item-desc">{{ item.desc }}</div>
+					<a class="rseume-section-item-link ease-2" ng-href="{{ link.url }}" ng-repeat="link in item.links" target="_blank">{{ link.name }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
