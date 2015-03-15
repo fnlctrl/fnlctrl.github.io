@@ -111,10 +111,6 @@ body {
     color: #fff;
     width: 144px;
     overflow: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .sidebar-section {
@@ -122,6 +118,10 @@ body {
     margin: 3vh 0 0 0;
     width: 256px;
     pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .sidebar-header {
