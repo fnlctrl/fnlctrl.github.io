@@ -24,7 +24,7 @@
 					else {
 						data = $http.get('data/data.json');
 						resume = $http.get('data/resume.json');
-						$q.all([data,resume]).then(function(resultArr){
+						$q.all([data, resume]).then(function (resultArr) {
 							storage = resultArr[0].data;
 							storage.resume = resultArr[1].data;
 							storageDefer.resolve(storage);
@@ -34,11 +34,15 @@
 				}
 			}
 		})
-		.controller('mainCtrl', function (dataService) {
+		.controller('mainCtrl', function ($scope, dataService) {
 			var self = this;
+			self.hideSidebar = hideSidebar;
 			dataService.getItems().then(function (data) {
 				self.resume = data['resume'];
 			});
+			function hideSidebar() {
+				$scope.$broadcast('hideSidebar')
+			}
 		})
 		.controller('navCtrl', function ($scope, $location, dataService) {
 			var self = this;
@@ -60,6 +64,8 @@
 			var shapes = [];
 			self.state = '';
 			self.toggle = toggle;
+			self.hide = function () { self.state = '' };
+			$scope.$on('hideSidebar', self.hide);
 			dataService.getItems().then(function (data) {
 				self.contacts = data['contacts'];
 				self.skills = data['skills'];
