@@ -1,54 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="portfolio">
+<html ng-app="portfolio" ng-strict-di>
 <head>
-	<meta charset="UTF-8"/>
+	<meta charset="UTF-8">
 	<title>fnlCtrl's Portfolio</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="css/fonts.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/resume.css"/>
-	<script src="js/angular.min.js"></script>
-	<script src="js/angular-route.min.js"></script>
-	<script src="js/angular-animate.min.js"></script>
-	<script src="js/app.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<base href="/">
 </head>
-<body ng-controller="mainCtrl as main" class="font-hei">
+<body>
 	<div class="copyright">
 		Copyright (C) 2014-2015 SongShuoyun. All rights reserved.
 	</div>
-	<div class="nav-wrapper" ng-controller="navCtrl as nav">
-		<a class="nav-dot ease-2" ng-repeat="view in nav.views" ng-class="nav.checkActive(view)" ng-href="#/{{view}}"><span class="nav-dot-hint ease-out-2">{{ view }}</span></a>
-	</div>
-	<div class="sidebar-wrapper ease-5" ng-controller="sidebarCtrl as sidebar" ng-class="sidebar.state">
-		<div class="sidebar-header">
-			<img class="sidebar-header-avatar ease-3" ng-click="sidebar.toggle()" src="img/avatar.jpg"/>
-			<div class="sidebar-header-contacts ease-2">
-				<h1>fnlCtrl</h1>
-				<div>fnlctrl@gmail.com</div>
-				<a class="ease-2" ng-repeat="contact in sidebar.contacts" ng-href="{{ contact.url }}" target="_blank">
-					<img ng-src="img/icon-{{ contact.name }}.svg">
-				</a>
-			</div>
-		</div>
-		<div class="sidebar-about sidebar-section ease-2">
-			宋铄运
-			<p class="font-kai">Sophomore, ISEE@ZJU</p>
-		</div>
-		<div class="sidebar-skills sidebar-section ease-2" >
-			<h1>Skill Points</h1>
-			<style>
-				{{ sidebar.getSkillStyle() }}
-			</style>
-			<div class="sidebar-skills-item" ng-class="'_'+skill.style.color" ng-repeat="skill in sidebar.skills">
-				<span class="sidebar-skills-item-alias ease-2" ng-class="skill.style.shape">{{ skill.alias }}</span>
-				<div class="sidebar-skills-item-stars-container">
-					<svg ng-style="{{ {'width':skill.star/5*100+'%'} }}" height="24px">
-						<path class="ease-out-2" fill="#FFFFFF" d="M12.5,0l3.9,7.9L25,9.2l-6.2,6.1l1.4,8.7l-7.7-4.1L4.8,24l1.5-8.7L0,9.2l8.6-1.3L12.5,0z M37.5,0l3.9,7.9L50,9.2l-6.2,6.1l1.4,8.7l-7.7-4.1L29.8,24l1.5-8.7L25,9.2l8.6-1.3L37.5,0z M62.5,0l3.9,7.9L75,9.2l-6.2,6.1l1.4,8.7l-7.7-4.1L54.8,24l1.5-8.7L50,9.2l8.6-1.3L62.5,0z M87.5,0l3.9,7.9l8.6,1.3l-6.2,6.1l1.4,8.7l-7.7-4.1L79.8,24l1.5-8.7L75,9.2l8.6-1.3L87.5,0z M112.5,0l3.9,7.9l8.6,1.3l-6.2,6.1l1.4,8.7l-7.7-4.1l-7.7,4.1l1.5-8.7L100,9.2l8.6-1.3L112.5,0z"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div ng-view class="view-container crossfade ease-5" ng-click="main.hideSidebar()"></div>
+	<nav></nav>
+	<sidebar class="ease-5"></sidebar>
+	<div ui-view></div>
+	<script src="bundle.js"></script>
 </body>
 </html>

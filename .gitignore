@@ -217,3 +217,5 @@ pip-log.txt
 
 #JetBrains
 .idea
+
+node_modules

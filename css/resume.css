@@ -7,12 +7,15 @@
     column-count: 2;
     font-size: 14px;
 }
+
 .resume-section {
     margin: 0 0 16px 0;
 }
+
 .resume-section-item {
     margin: 0 0 12px 0;
 }
+
 .resume-section-title {
     margin: 0 0 12px 0;
     font-weight: 300;
@@ -20,30 +23,37 @@
     line-height: 1em;
     float: left;
 }
-.resume-section-item  {
+
+.resume-section-item {
     position: relative;
     width: calc(100% - 5rem);
     display: inline-block;
 }
+
 .resume-section-item:nth-of-type(n+2) {
     margin-left: 5rem;
 }
+
 .resume-section-item h3 {
     margin: 0;
     font-family: "Microsoft YaHei";
 }
+
 .resume-section-item-desc {
     white-space: pre-line;
     margin: 6px 0 0 16px;
 }
+
 .resume-section-item-time {
     font-weight: 100;
     font-style: italic;
 }
+
 .resume-section-item-name {
     font-weight: 400;
 }
-.rseume-section-item-link {
+
+.resume-section-item-link {
     text-decoration: none;
     color: #ffffff;
     display: block;
@@ -53,8 +63,9 @@
     border-radius: 6px;
     margin: 3px 0 0 16px;
 }
-.rseume-section-item-link:hover {
+
+.resume-section-item-link:hover {
     background: #fff;
     color: #00C4B9;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }

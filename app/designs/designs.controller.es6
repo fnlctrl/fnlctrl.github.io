@@ -1,0 +1,1 @@
+export default angular.module('portfolio.designs',[]).name

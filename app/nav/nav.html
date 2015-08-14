@@ -1,0 +1,6 @@
+<a class="nav-dot ease-2"
+   ng-repeat="view in nav.views"
+   ng-class="nav.checkActive(view)"
+   ng-href="#/{{view}}">
+	<span class="nav-dot-hint ease-out-2">{{ view }}</span>
+</a>
