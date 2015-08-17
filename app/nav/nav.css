@@ -1,0 +1,46 @@
+nav {
+	position: fixed;
+	width: auto;
+	height: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 40px;
+	z-index: 99;
+}
+
+.nav-dot {
+	display: block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 999px;
+	background: #fff;
+	opacity: 0.65;
+}
+
+.nav-dot:hover {
+	opacity: 1
+}
+
+.nav-dot:hover .nav-dot-hint {
+	opacity: 1
+}
+
+.nav-dot:nth-of-type(n+2) {
+	margin: 20px 0 0 0;
+}
+
+.nav-dot.active {
+	transform: scale(1.2);
+	opacity: 1;
+}
+
+.nav-dot-hint {
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	left: 140%;
+	line-height: 20px;
+	opacity: 0;
+	pointer-events: none;
+}

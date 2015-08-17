@@ -1,13 +1,15 @@
-const _rootScope = new WeakMap();
-
 class CoreController {
 	constructor($rootScope) {
 		"ngInject";
-		_rootScope.set(this, $rootScope);
+		this.$rootScope = $rootScope;
 	}
 
 	hideSidebar() {
-		_rootScope.$emit('sidebar:hide');
+		this.$rootScope.$emit('sidebar:hide');
+	}
+
+	setBackground(color) {
+		this.background = color;
 	}
 }
 

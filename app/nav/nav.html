@@ -1,6 +1,8 @@
-<a class="nav-dot ease-2"
+<a class="nav-dot" ease-2
    ng-repeat="view in nav.views"
-   ng-class="nav.checkActive(view)"
-   ng-href="#/{{view}}">
-	<span class="nav-dot-hint ease-out-2">{{ view }}</span>
+   ng-class="nav.checkActive(view.name)"
+   ng-href="/{{view.name}}"
+   ng-click="core.setBackground(view.color)"
+	>
+	<span class="nav-dot-hint" ease-out-2>{{ view.name }}</span>
 </a>

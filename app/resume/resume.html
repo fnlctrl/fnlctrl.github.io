@@ -7,11 +7,10 @@
 			Designer <br>
 			Frontend Developer
 		</span>
-		<hr>
 	</div>
 	<div class="view-content">
 		<div class="resume-container">
-			<div class="resume-section" ng-repeat="section in main.resume">
+			<div class="resume-section" ng-repeat="section in resume.data">
 				<h1 class="resume-section-title">{{ section.title }}</h1>
 				<div class="resume-section-item" ng-repeat="item in section.items">
 					<h3>{{ item.place }}</h3>

@@ -1,31 +1,40 @@
+import './sidebar.css'
 import template from './sidebar.html'
-
-const _rootScope = new WeakMap();
+import skills from '../../data/skills.json'
+import contacts from '../../data/contacts.json'
 
 class Sidebar {
-	constructor($rootScope) {
+	constructor() {
 		this.restrict = 'E';
 		this.template = template;
 		this.controllerAs = 'sidebar';
-		_rootScope.set(this, $rootScope);
 	}
 
-	controller() {
-		this.state = '';
-		_rootScope.get(Sidebar.instance).$on('sidebar:hide', ()=> {this.state = ''});
-		_rootScope.get(Sidebar.instance).$on('sidebar:show', ()=> {this.state = 'active'});
-
-		this.toggle = ()=> {
-			this.state = (this.state === '') ? 'active' : '';
-		}
-	}
-
-	static getInstance($rootScope) {
+	controller($rootScope, $element) {
 		'ngInject';
-		Sidebar.instance = new Sidebar($rootScope);
-		return Sidebar.instance;
+		$rootScope.$on('sidebar:hide', ()=> {$element.removeClass('active');});
+		this.skills = skills;
+		this.contacts = contacts;
+		this.toggle = ()=> {$element.toggleClass('active');}
 	}
 
+	link(scope, elem, attrs, controller) {
+		var styles = controller.skills.reduce((prev, curr)=> {
+			return prev + `
+				._${curr.style.color}:hover path{
+					fill: #${curr.style.color};
+				}
+				._${curr.style.color} .sidebar-skills-item-background {
+					background: #${curr.style.color};
+				}
+			`
+		}, '');
+		angular.element(elem).append(angular.element(`<style>${styles}</style>`))
+	}
+
+	static getInstance() {
+		return new Sidebar();
+	}
 }
 
 export default

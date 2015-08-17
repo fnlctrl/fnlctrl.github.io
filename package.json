@@ -1,10 +1,10 @@
 {
   "name": "portfolio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "angular": "latest",
     "angular-animate": "latest",
-    "angular-ui-router": "^0.2.15"
+    "angular-ui-router": "latest"
   },
   "devDependencies": {
     "autoprefixer-loader": "~2.0.0",
@@ -18,7 +18,8 @@
     "ng-annotate-loader": "0.0.6",
     "style-loader": "~0.12.3",
     "webpack": "~1.11.0",
-    "webpack-dev-server": "~1.10.1"
+    "webpack-dev-server": "~1.10.1",
+    "json-loader": "~0.5.2"
   },
   "scripts": {
     "start": "webpack-dev-server --hot --inline --history-api-fallback"

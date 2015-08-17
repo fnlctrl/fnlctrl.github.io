@@ -6,13 +6,11 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<base href="/">
 </head>
-<body>
-	<div class="copyright">
-		Copyright (C) 2014-2015 SongShuoyun. All rights reserved.
-	</div>
+<body ng-controller="CoreController as core" ng-style="{'background':core.background}">
+	<sidebar></sidebar>
+	<div ui-view crossfade ease-3 ng-click="core.hideSidebar()"></div>
 	<nav></nav>
-	<sidebar class="ease-5"></sidebar>
-	<div ui-view></div>
+	<div class="copyright">Copyright (C) 2014-2015 SongShuoyun. All rights reserved.</div>
 	<script src="bundle.js"></script>
 </body>
 </html>

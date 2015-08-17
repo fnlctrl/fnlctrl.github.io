@@ -2,7 +2,7 @@
 var webpack = require('webpack'),
 	path = require('path');
 
-var APP = __dirname + '/app';
+var APP = path.join(__dirname, 'app');
 
 module.exports = {
 	context: APP,
@@ -17,7 +17,7 @@ module.exports = {
 		loaders: [{
 			test: /\.es6$/,
 			exclude: /(node_modules|bower_components)/,
-			loaders: ['ng-annotate', 'babel-loader']
+			loaders: ['uglify', 'ng-annotate', 'babel-loader']
 		}, {
 			test: /\.css$/,
 			loader: "style!css!autoprefixer"
@@ -25,8 +25,11 @@ module.exports = {
 			test: /\.(html|svg)$/,
 			loader: "html"
 		}, {
+			test: /\.json$/,
+			loader: 'json'
+		}, {
 			test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-			loader: "file-loader"
+			loader: "file"
 		}]
 	},
 	resolve: {

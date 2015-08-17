@@ -1,0 +1,101 @@
+[
+  {
+    "name": "adobe illustrator",
+    "alias": "Ai",
+    "star": "5",
+    "style": {
+      "shape": "circle",
+      "color": "FF7C19"
+    }
+  },
+  {
+    "name": "adobe indesign",
+    "alias": "ID",
+    "star": "5",
+    "style": {
+      "shape": "circle",
+      "color": "FF3E8A"
+    }
+  },
+  {
+    "name": "adobe photoshop",
+    "alias": "Ps",
+    "star": "3.5",
+    "style": {
+      "shape": "circle",
+      "color": "25C8F2"
+    }
+  },
+  {
+    "name": "svg",
+    "alias": "SVG",
+    "star": "3",
+    "style": {
+      "shape": "rectangle",
+      "color": "FEB127"
+    }
+  },
+  {
+    "name": "javascript",
+    "alias": "JavaScript",
+    "star": "3.5",
+    "style": {
+      "shape": "rectangle",
+      "color": "F0DB4F"
+    }
+  },
+  {
+    "name": "jquery",
+    "alias": "jQuery",
+    "star": "3.5",
+    "style": {
+      "shape": "rectangle",
+      "color": "7BD6FD"
+    }
+  },
+  {
+    "name": "angularjs",
+    "alias": "AngularJS",
+    "star": "3.5",
+    "style": {
+      "shape": "rectangle",
+      "color": "FF433D"
+    }
+  },
+  {
+    "name": "php",
+    "alias": "PHP",
+    "star": "2",
+    "style": {
+      "shape": "rectangle",
+      "color": "AC7BBF"
+    }
+  },
+  {
+    "name": "python",
+    "alias": "Python",
+    "star": "2",
+    "style": {
+      "shape": "rectangle",
+      "color": "24A0FF"
+    }
+  },
+  {
+    "name": "nodejs",
+    "alias": "Node.js",
+    "star": "0.5",
+    "style": {
+      "shape": "rectangle",
+      "color": "80BD01"
+    }
+  },
+  {
+    "name": "git",
+    "alias": "git",
+    "star": "3",
+    "style": {
+      "shape": "rectangle",
+      "color": "F44D27"
+    }
+  }
+]
