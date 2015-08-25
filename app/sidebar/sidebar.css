@@ -141,7 +141,7 @@ sidebar {
 .sidebar-skills-item-stars:after {
 	content: '';
 	position: absolute;
-	background-image: url(/img/icon-star.svg);
+	background-image: url(../../img/icon-star.svg);
 	opacity: 0.2;
 	height: 100%;
 	width: 100%;
