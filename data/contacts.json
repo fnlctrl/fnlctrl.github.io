@@ -1,14 +1,5 @@
-[
-  {
-    "name": "github",
-    "url": "http://github.com/fnlctrl"
-  },
-  {
-    "name": "zhihu",
-    "url": "http://www.zhihu.com/people/fnlctrl"
-  },
-  {
-    "name": "gplus",
-    "url": "http://google.com/+宋铄运"
-  }
-]
+{
+  "github": "http://github.com/fnlctrl",
+  "zhihu": "http://www.zhihu.com/people/fnlctrl",
+  "gplus": "http://google.com/+宋铄运"
+}

@@ -97,5 +97,14 @@
       "shape": "rectangle",
       "color": "F44D27"
     }
+  },
+  {
+    "name": "webpack",
+    "alias": "webpack",
+    "star": "3",
+    "style": {
+      "shape": "rectangle",
+      "color": "678dc9"
+    }
   }
 ]

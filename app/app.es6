@@ -4,6 +4,7 @@
 
 import angular from 'angular'
 import ngAnimate from 'angular-animate'
+import ngSanitize from 'angular-sanitize'
 import uiRouter from 'angular-ui-router'
 import '../css/fonts.css'
 
@@ -17,14 +18,17 @@ import core from './core/core.controller'
 import sidebar from './sidebar/sidebar.directive'
 import nav from './nav/nav.directive'
 import resume from './resume/resume.controller'
+//import column from './column/column.directive'
 
 angular
 	.module('portfolio', [
 		uiRouter,
 		ngAnimate,
+		ngSanitize,
 		core,
 		sidebar,
 		nav,
-		resume
+		resume,
+		//column
 	])
 	.config(config);

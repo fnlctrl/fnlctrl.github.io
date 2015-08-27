@@ -13,6 +13,16 @@ body {
 	background: #fff;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 [ease-2] {
 	transition: all 0.2s ease;
 }
@@ -87,7 +97,7 @@ body {
 	height: 100%;
 	width: 100%;
 	color: #fff;
-	padding: 30px 30px 40px 80px;
+	padding: 30px 30px 60px 80px;
 	box-sizing: border-box;
 }
 
@@ -105,34 +115,41 @@ body {
 
 .view-header {
 	font-size: 18px;
-	height: 110px;
+	height: 100px;
 	position: relative;
 }
-.view-header h1{
+
+.view-header h1 {
 	font-size: 60px;
-	height: 80px;
+	height: 100px;
+	line-height: 100px;
+	position: relative;
 	font-weight: 200;
-	margin: 0;
 }
+
 .view-header hr {
-	border: 1px solid rgba(255,255,255,0.6);
+	border: 1px solid rgba(255, 255, 255, 0.6);
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
+
 .view-title {
 	display: inline-block;
 	margin: 0 10px 0 0;
 }
+
 .view-description {
 	display: inline-block;
 	font-size: 14px;
 }
+
 .view-content {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	top: -110px;
+	top: -100px;
 	padding: 110px 0 0 0;
 	box-sizing: border-box;
+	overflow-x: auto;
 }

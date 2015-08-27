@@ -6,13 +6,13 @@
 	<div class="sidebar-contacts" ease-3>
 		<h1>fnlCtrl</h1>
 		<div>fnlctrl@gmail.com</div>
-		<a ng-repeat="contact in sidebar.contacts" ease-2 ng-href="{{ ::contact.url }}" target="_blank">
-			<img ng-src="img/icon-{{ ::contact.name }}.svg">
+		<a ng-repeat="(name,link) in sidebar.contacts" ease-2 ng-href="{{ ::link }}" target="_blank">
+			<img ng-src="img/icon-{{ ::name }}.svg">
 		</a>
 	</div>
 </div>
 <div class="sidebar-about sidebar-section">
-	宋铄运
+	宋铄运(时渊)
 	<p class="font-kai">Junior, ISEE@ZJU</p>
 </div>
 <div class="sidebar-skills sidebar-section">

@@ -1,71 +1,142 @@
 .resume-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    font-size: 14px;
+	height: 100%;
+	position: relative;
+	font-size: 14px;
+	line-height: 16px;
+	overflow-x: auto;
+	text-align: justify;
 }
 
-.resume-section {
-    margin: 0 0 16px 0;
+.resume-container h1 {
+	font-weight: 100;
+	font-size: 28px;
+	line-height: 32px;
+	width: 100%;
+	opacity: 0.7;
+	position: relative;
+	will-change: opacity;
+	-webkit-column-break-before: always;
 }
 
-.resume-section-item {
-    margin: 0 0 12px 0;
+.resume-container h1 ~ *:not(h1) {
+	display: inline-block;
+	width: 100%;
 }
 
-.resume-section-title {
-    margin: 0 0 12px 0;
-    font-weight: 300;
-    width: 5rem;
-    line-height: 1em;
-    float: left;
+.resume-container h2 {
+	line-height: 32px;
+	font-size: 28px;
+	font-weight: 600;
 }
 
-.resume-section-item {
-    position: relative;
-    width: calc(100% - 5rem);
-    display: inline-block;
+.resume-container h1 + h2 {
+	margin-left: 0;
 }
 
-.resume-section-item:nth-of-type(n+2) {
-    margin-left: 5rem;
+.resume-container h3 {
+	font-size: 16px;
+	line-height: 16px;
+	margin-top: 8px;
+	font-weight: 400;
 }
 
-.resume-section-item h3 {
-    margin: 0;
-    font-family: "Microsoft YaHei";
+.resume-container h4 {
+	font-weight: 200;
+	opacity: 0.7;
+	will-change: opacity;
 }
 
-.resume-section-item-desc {
-    white-space: pre-line;
-    margin: 6px 0 0 16px;
+.resume-container h4 + * {
+	margin-top: 16px;
 }
 
-.resume-section-item-time {
-    font-weight: 100;
-    font-style: italic;
+.resume-container blockquote {
+	margin-top: 32px;
+	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
 }
 
-.resume-section-item-name {
-    font-weight: 400;
+.resume-container h1 + blockquote {
+	margin-top: 0;
+}
+
+.resume-container ul {
+	padding-left: 1.2em;
 }
 
 .resume-section-item-link {
-    text-decoration: none;
-    color: #ffffff;
-    display: block;
-    float: left;
-    border: 1px solid #fff;
-    padding: 4px 8px;
-    border-radius: 6px;
-    margin: 3px 0 0 16px;
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
+	float: left;
+	border: 1px solid #fff;
+	padding: 4px 8px;
+	border-radius: 6px;
+	margin: 3px 0 0 16px;
 }
 
 .resume-section-item-link:hover {
-    background: #fff;
-    color: #00C4B9;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+	background: #fff;
+	color: #00C4B9;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.resume-container a {
+	border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+	transition: all 0.3s ease;
+}
+
+.resume-container a:hover {
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.resume-container hr {
+	display: none !important;
+}
+
+.resume-container::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+.resume-container::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #fff;
+}
+
+@media (min-width: 640px) {
+	.resume-container {
+		column-count: 100;
+		column-width: 200px;
+		column-gap: 20px;
+	}
+
+	.resume-container::-webkit-scrollbar-track {
+		background: linear-gradient(
+			to bottom,
+			transparent 0%,
+			transparent 30%,
+			rgba(255, 255, 255, 0.5) 50%,
+			transparent 70%,
+			transparent 100%
+		)
+	}
+
+}
+
+@media (max-width: 640px) {
+	.resume-container::-webkit-scrollbar-track {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 30%,
+			rgba(255, 255, 255, 0.5) 50%,
+			transparent 70%,
+			transparent 100%
+		)
+	}
+
+	.resume-container h1:nth-of-type(n+2) {
+		margin-top: 64px;
+	}
 }

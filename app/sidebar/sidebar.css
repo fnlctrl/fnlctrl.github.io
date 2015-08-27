@@ -8,8 +8,8 @@ sidebar {
 	right: -176px;
 	z-index: 99;
 	color: #fff;
-	overflow: hidden;
 	transition: transform 0.3s ease;
+	pointer-events: none;
 }
 
 .sidebar-section {
@@ -23,23 +23,7 @@ sidebar {
 .sidebar-header {
 	position: relative;
 	height: 84px;
-}
-
-.sidebar-header:after {
-	content: 'profile';
-	position: absolute;
-	left: 0;
-	top: 100%;
-	width: 84px;
-	margin-top: 10px;
-	text-align: center;
-	opacity: 0;
-	font-size: 12px;
-	transition: all 0.2s ease;
-}
-
-.sidebar-header:hover:after {
-	opacity: 1;
+	pointer-events: auto;
 }
 
 .sidebar-avatar {
@@ -75,6 +59,26 @@ sidebar {
 	position: absolute;
 	transform: scale(1);
 	z-index: -1;
+}
+
+.sidebar-avatar:after {
+	content: 'profile';
+	position: absolute;
+	top: 0;
+	right: 100%;
+	margin-right: 10px;
+	height: 100%;
+	line-height: 84px;
+	text-align: center;
+	font-size: 12px;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.sidebar-avatar:hover:after {
+	opacity: 1;
 }
 
 .sidebar-contacts {
@@ -182,13 +186,9 @@ sidebar {
 
 /*sidebar active*/
 sidebar.active {
-	background: rgba(0, 0, 0, .3);
+	background: rgba(0, 0, 0, 0.7);
 	transform: translateX(-176px);
-}
-
-sidebar.active ~ * {
-	opacity: 0.8;
-	filter: blur(1px);
+	pointer-events: auto;
 }
 
 sidebar.active .sidebar-section {
@@ -200,7 +200,7 @@ sidebar.active .sidebar-contacts {
 	opacity: 1;
 }
 
-sidebar.active .sidebar-header:after {
+sidebar.active .sidebar-avatar:after {
 	opacity: 0;
 }
 

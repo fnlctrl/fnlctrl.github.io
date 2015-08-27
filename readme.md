@@ -1,1 +1,2 @@
-fnlCtrl's portfolio
+My portfolio.
+Built with angular, webpack and ES6.
