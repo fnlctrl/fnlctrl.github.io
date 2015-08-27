@@ -3,16 +3,17 @@ var webpack = require('webpack'),
 	path = require('path');
 
 var APP = path.join(__dirname, 'app');
+var libDir = path.join(__dirname, '/lib');
 
 module.exports = {
 	context: APP,
 	entry: {
-		app: './app.es6'
+		app: ['./app.es6']
 	},
 	output: {
-		path: './assets',
+		path: './build',
 		filename: 'bundle.js',
-		publicPath: ''
+		publicPath: 'build'
 	},
 	module: {
 		loaders: [{
@@ -23,7 +24,7 @@ module.exports = {
 			test: /\.css$/,
 			loader: "style!raw!autoprefixer"
 		}, {
-			test: /\.html$/,
+			test: /\.(html|md)$/,
 			loader: "raw"
 		}, {
 			test: /\.json$/,
@@ -31,6 +32,9 @@ module.exports = {
 		}]
 	},
 	resolve: {
-		extensions: ['', '.es6', '.js', '.html']
+		extensions: ['', '.es6', '.js', '.html'],
+		alias: {
+			FTColumnflow: path.join(libDir, 'FTColumnflow.js')
+		}
 	}
 };
