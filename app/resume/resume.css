@@ -3,7 +3,6 @@
 	position: relative;
 	font-size: 14px;
 	line-height: 16px;
-	overflow-x: auto;
 	text-align: justify;
 }
 
@@ -60,10 +59,6 @@
 	margin-top: 0;
 }
 
-.resume-container ul {
-	padding-left: 1.2em;
-}
-
 .resume-section-item-link {
 	text-decoration: none;
 	color: #ffffff;
@@ -90,21 +85,17 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-.resume-container::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
-}
-
-.resume-container::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background: #fff;
-}
 
 @media (min-width: 640px) {
 	.resume-container {
 		column-count: 100;
 		column-width: 260px;
 		column-gap: 20px;
+		overflow-x: auto;
+	}
+
+	.resume-container ul {
+		padding-left: 1.2em;
 	}
 
 	.resume-container::-webkit-scrollbar-track {
@@ -118,26 +109,24 @@
 		)
 	}
 
-	.resume-container hr {
-		display: none !important;
+	.resume-container::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
 	}
 
+	.resume-container::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: #fff;
+	}
 }
 
 @media (max-width: 640px) {
-	.resume-container::-webkit-scrollbar-track {
-		background: linear-gradient(
-			to right,
-			transparent 0%,
-			transparent 30%,
-			rgba(255, 255, 255, 0.5) 50%,
-			transparent 70%,
-			transparent 100%
-		)
+	.resume-container {
+		overflow-x: visible;
 	}
 
 	.resume-container blockquote {
-		margin-top: 16px;
+		margin-top: 32px;
 	}
 
 	.resume-container hr {
@@ -152,5 +141,20 @@
 		border: none;
 		margin: 32px 0;
 		height: 1px;
+	}
+
+	.resume-container h1 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.resume-container h1:nth-of-type(n+2) {
+		margin-top: 40px;
+	}
+
+	.resume-container h2 {
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 24px;
 	}
 }

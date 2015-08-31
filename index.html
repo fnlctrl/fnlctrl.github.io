@@ -7,10 +7,12 @@
 	<base href="/">
 </head>
 <body ng-controller="CoreController as core" ng-style="{'background':core.background}">
-	<div class="copyright">Copyright (C) 2014-2015 SongShuoyun. All rights reserved.</div>
 	<sidebar></sidebar>
 	<div ui-view crossfade ease-3 ng-click="core.hideSidebar()"></div>
 	<nav></nav>
+	<div class="copyright">
+		<span>Copyright (C) 2014-2015 SongShuoyun. All rights reserved.</span>
+	</div>
 	<script src="build/bundle.js"></script>
 </body>
 </html>
