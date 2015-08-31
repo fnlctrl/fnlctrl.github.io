@@ -90,10 +90,6 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-.resume-container hr {
-	display: none !important;
-}
-
 .resume-container::-webkit-scrollbar {
 	width: 6px;
 	height: 6px;
@@ -107,7 +103,7 @@
 @media (min-width: 640px) {
 	.resume-container {
 		column-count: 100;
-		column-width: 300px;
+		column-width: 260px;
 		column-gap: 20px;
 	}
 
@@ -120,6 +116,10 @@
 			transparent 70%,
 			transparent 100%
 		)
+	}
+
+	.resume-container hr {
+		display: none !important;
 	}
 
 }
@@ -136,7 +136,21 @@
 		)
 	}
 
-	.resume-container h1:nth-of-type(n+2) {
-		margin-top: 64px;
+	.resume-container blockquote {
+		margin-top: 16px;
+	}
+
+	.resume-container hr {
+		background-image: linear-gradient(
+			to right,
+			#fff 10%,
+			transparent 11%
+		);
+		background-position: bottom;
+		background-size: 10px 1px;
+		background-repeat: repeat-x;
+		border: none;
+		margin: 32px 0;
+		height: 1px;
 	}
 }

@@ -18,6 +18,8 @@ import core from './core/core.controller'
 import sidebar from './sidebar/sidebar.directive'
 import nav from './nav/nav.directive'
 import resume from './resume/resume.controller'
+import designs from './designs/designs.controller'
+import gallery from './gallery/gallery.directive'
 //import column from './column/column.directive'
 
 angular
@@ -29,6 +31,8 @@ angular
 		sidebar,
 		nav,
 		resume,
+		designs,
+		gallery
 		//column
 	])
 	.config(config);

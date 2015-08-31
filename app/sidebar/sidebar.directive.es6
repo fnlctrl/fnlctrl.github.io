@@ -19,7 +19,8 @@ class Sidebar {
 	}
 
 	link(scope, elem, attrs, controller) {
-		var styles = controller.skills.reduce((prev, curr)=> {
+		var styles = Object.keys(controller.skills).reduce((prev, curr)=> {
+			curr = controller.skills[curr];
 			return prev + `
 				._${curr.style.color}:hover path{
 					fill: #${curr.style.color};
@@ -29,7 +30,7 @@ class Sidebar {
 				}
 			`
 		}, '');
-		angular.element(elem).append(angular.element(`<style>${styles}</style>`))
+		elem.append(angular.element(`<style>${styles}</style>`))
 	}
 
 	static getInstance() {

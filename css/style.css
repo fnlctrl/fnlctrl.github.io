@@ -11,6 +11,7 @@ body {
 	width: 100%;
 	margin: 0;
 	background: #fff;
+	font-family: 'Raleway';
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, blockquote {
@@ -21,6 +22,7 @@ h1, h2, h3, h4, h5, h6, p, ul, blockquote {
 a {
 	text-decoration: none;
 	color: inherit;
+	display: inline-block;
 }
 
 [ease-2] {
@@ -48,6 +50,8 @@ a {
 	font-size: 12px;
 	text-align: center;
 	width: 100%;
+	font-weight: 100;
+	font-family: sans-serif,'Arial';
 }
 
 /*ngAnimate*/
@@ -103,6 +107,8 @@ a {
 
 .view-designs {
 	background: #0094C7;
+	/*background: #fff;*/
+	/*color: #555;*/
 }
 
 .view-projects {
@@ -124,14 +130,8 @@ a {
 	height: 100px;
 	line-height: 100px;
 	position: relative;
-	font-weight: 200;
-}
-
-.view-header hr {
-	border: 1px solid rgba(255, 255, 255, 0.6);
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .view-title {
@@ -152,4 +152,11 @@ a {
 	padding: 110px 0 0 0;
 	box-sizing: border-box;
 	overflow-x: auto;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src:
+	url(https://fonts.googleapis.com/css?family=Raleway),
+	url(../fonts/raleway_thin-webfont.woff) format('woff')
 }

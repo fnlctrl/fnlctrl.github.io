@@ -1,6 +1,5 @@
-[
-  {
-    "name": "adobe illustrator",
+{
+  "adobe illustrator": {
     "alias": "Ai",
     "star": "5",
     "style": {
@@ -8,8 +7,7 @@
       "color": "FF7C19"
     }
   },
-  {
-    "name": "adobe indesign",
+  "adobe indesign": {
     "alias": "ID",
     "star": "5",
     "style": {
@@ -17,8 +15,7 @@
       "color": "FF3E8A"
     }
   },
-  {
-    "name": "adobe photoshop",
+  "adobe photoshop": {
     "alias": "Ps",
     "star": "3.5",
     "style": {
@@ -26,8 +23,7 @@
       "color": "25C8F2"
     }
   },
-  {
-    "name": "svg",
+  "svg": {
     "alias": "SVG",
     "star": "3",
     "style": {
@@ -35,8 +31,7 @@
       "color": "FEB127"
     }
   },
-  {
-    "name": "javascript",
+  "javascript": {
     "alias": "JavaScript",
     "star": "3.5",
     "style": {
@@ -44,8 +39,7 @@
       "color": "F0DB4F"
     }
   },
-  {
-    "name": "jquery",
+  "jquery": {
     "alias": "jQuery",
     "star": "3.5",
     "style": {
@@ -53,8 +47,7 @@
       "color": "7BD6FD"
     }
   },
-  {
-    "name": "angularjs",
+  "angularjs": {
     "alias": "AngularJS",
     "star": "3.5",
     "style": {
@@ -62,8 +55,7 @@
       "color": "FF433D"
     }
   },
-  {
-    "name": "php",
+  "php": {
     "alias": "PHP",
     "star": "2",
     "style": {
@@ -71,8 +63,7 @@
       "color": "AC7BBF"
     }
   },
-  {
-    "name": "python",
+  "python": {
     "alias": "Python",
     "star": "2",
     "style": {
@@ -80,8 +71,7 @@
       "color": "24A0FF"
     }
   },
-  {
-    "name": "nodejs",
+  "nodejs": {
     "alias": "Node.js",
     "star": "0.5",
     "style": {
@@ -89,8 +79,7 @@
       "color": "80BD01"
     }
   },
-  {
-    "name": "git",
+  "git": {
     "alias": "git",
     "star": "3",
     "style": {
@@ -98,8 +87,7 @@
       "color": "F44D27"
     }
   },
-  {
-    "name": "webpack",
+  "webpack": {
     "alias": "webpack",
     "star": "3",
     "style": {
@@ -107,4 +95,4 @@
       "color": "678dc9"
     }
   }
-]
+}

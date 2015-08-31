@@ -13,11 +13,11 @@
 </div>
 <div class="sidebar-about sidebar-section">
 	宋铄运(时渊)
-	<p class="font-kai">Junior, ISEE@ZJU</p>
+	<p class="font-song">Junior, ISEE@ZJU</p>
 </div>
 <div class="sidebar-skills sidebar-section">
 	<h1>Skill Points</h1>
-	<div class="sidebar-skills-item" ng-class="'_'+skill.style.color" ng-repeat="skill in sidebar.skills">
+	<div class="sidebar-skills-item" ng-repeat="(name,skill) in sidebar.skills" ng-class="'_'+skill.style.color">
 		<div class="sidebar-skills-item-alias" ease-out-2 ng-class="skill.style.shape">
 			{{ ::skill.alias }}
 			<div class="sidebar-skills-item-background" ease-out-2></div>
