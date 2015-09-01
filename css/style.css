@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "Raleway";
+	src:  url(../fonts/raleway_medium.woff) format('woff'),
+	url(../fonts/raleway_medium.woff2) format('woff2')
+}
+
 html {
 	position: absolute;
 	height: 100%;
@@ -10,7 +16,8 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	font-family: 'Raleway';
+	font-family: 'Raleway', sans-serif;
+	transition: background 0.5s ease;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, blockquote {
@@ -34,10 +41,6 @@ a {
 
 [ease-3] {
 	transition: all 0.3s ease;
-}
-
-[ease-5] {
-	transition: all 0.5s ease;
 }
 
 .copyright {
@@ -90,11 +93,12 @@ a {
 
 /*view*/
 [ui-view] {
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	min-height: 100%;
+	transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
 .view {
@@ -108,18 +112,6 @@ a {
 	box-sizing: border-box;
 }
 
-.view-designs {
-	background: #0094C7;
-}
-
-.view-projects {
-	background: #00C267;
-}
-
-.view-resume {
-	background: #00C4B9;
-}
-
 .view-title {
 	position: relative;
 	font-weight: 900;
@@ -131,12 +123,6 @@ a {
 .view-description {
 	display: inline-block;
 	font-size: 14px;
-}
-
-@font-face {
-	font-family: "Raleway";
-	src: url(https://fonts.googleapis.com/css?family=Raleway),
-	url(../fonts/raleway_thin-webfont.woff) format('woff')
 }
 
 @media (min-width: 640px) {
@@ -185,10 +171,6 @@ a {
 		display: none;
 	}
 
-	/*[ui-view] {*/
-		/*position: absolute;*/
-	/*}*/
-	/**/
 	.view {
 		padding: 60px 40px 100px 40px;
 	}

@@ -1,0 +1,39 @@
+/**
+ * Mono: Black and white
+ */
+.mono {
+	background: #fff;
+}
+
+/**
+ * Blue
+ */
+.blue {
+	background: #0094C7;
+}
+
+.blue .nav-dot-hint {
+	color: #0094C7;
+}
+
+/**
+ * Cyan
+ */
+.cyan {
+	background: #00C4B9;
+}
+
+.cyan .nav-dot-hint {
+	color: #00C4B9;
+}
+
+/**
+ * Green
+ */
+.green {
+	background: #00C267;
+}
+
+.green .nav-dot-hint {
+	color: #00C267;
+}

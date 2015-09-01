@@ -15,6 +15,15 @@
 	position: relative;
 	will-change: opacity;
 	-webkit-column-break-before: always;
+	page-break-before: always;
+	break-before: always;
+}
+
+.resume-container h1:nth-of-type(2) { /*技术一栏*/
+	margin-top: 32px;
+	-webkit-column-break-before: auto;
+	page-break-before: auto;
+	break-before: auto;
 }
 
 .resume-container h1 ~ *:not(h1) {
@@ -51,8 +60,9 @@
 
 .resume-container blockquote {
 	margin-top: 32px;
-	break-inside: avoid;
 	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
 }
 
 .resume-container h1 + blockquote {
@@ -85,7 +95,6 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-
 @media (min-width: 640px) {
 	.resume-container {
 		column-count: 100;
@@ -95,7 +104,7 @@
 	}
 
 	.resume-container ul {
-		padding-left: 1.2em;
+		padding-left: 1.4em;
 	}
 
 	.resume-container::-webkit-scrollbar-track {

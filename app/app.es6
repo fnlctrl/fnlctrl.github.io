@@ -13,6 +13,7 @@ import '../css/fonts.css'
  */
 
 import '../css/style.css'
+import './themes/themes.css'
 import config from './app.config'
 import core from './core/core.controller'
 import sidebar from './sidebar/sidebar.directive'

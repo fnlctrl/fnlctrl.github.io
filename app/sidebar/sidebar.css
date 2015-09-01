@@ -181,7 +181,7 @@ sidebar {
 
 /*sidebar active*/
 sidebar.active {
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0,0,0,0.5);
 	transform: translateX(-176px);
 	pointer-events: auto;
 }
@@ -201,6 +201,10 @@ sidebar.active .sidebar-avatar:after {
 
 sidebar.active .sidebar-avatar img {
 	transform: scale(1);
+}
+
+sidebar.active ~ * {
+	transform: translateX(-320px);
 }
 
 @keyframes glow {

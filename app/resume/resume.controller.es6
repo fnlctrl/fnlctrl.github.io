@@ -13,7 +13,6 @@ class ResumeController {
 		this.data = splitByTagNames(temporaryDom, ['h1', 'h2'])
 			.reduce((prev, curr)=>prev + wrap(curr, 'blockquote'), '');
 
-		console.log(this.data);
 		/**
 		 * Given [h1,[h2,a,p,...]]
 		 * Returns <h1><tagName><h2><a><p></tagName>

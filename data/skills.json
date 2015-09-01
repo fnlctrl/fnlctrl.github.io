@@ -73,7 +73,7 @@
   },
   "nodejs": {
     "alias": "Node.js",
-    "star": "0.5",
+    "star": "1",
     "style": {
       "shape": "rectangle",
       "color": "80BD01"

@@ -4,6 +4,19 @@
 ### 电子科学与技术
 #### 2013.09 - 2017.07
 
+# 技术
+### Adobe Illustrator  
+### Adobe InDesign  
+### Adobe Photoshop  
+### Javascript  
+### jQuery  
+### AngularJS  
+### Python  
+### NodeJS  
+### git  
+### SVG  
+
+
 # 经历
 
 ## 阿里巴巴<br>技术保障部UED

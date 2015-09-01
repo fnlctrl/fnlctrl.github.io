@@ -12,9 +12,9 @@ class Nav {
 		'ngInject';
 
 		this.views = [
-			{name: 'designs', color: '#0094C7'},
-			{name: 'projects', color: '#00C267'},
-			{name: 'resume', color: '#00C4B9'}
+			'designs',
+			'projects',
+			'resume'
 		];
 
 		this.checkActive = (path)=> {
