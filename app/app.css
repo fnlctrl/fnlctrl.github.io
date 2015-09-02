@@ -1,7 +1,8 @@
 @font-face {
 	font-family: "Raleway";
-	src:  url(../fonts/raleway_medium.woff) format('woff'),
-	url(../fonts/raleway_medium.woff2) format('woff2')
+	src:  url(../fonts/raleway_medium.woff2) format('woff2'),
+	url(../fonts/raleway_medium.woff) format('woff')
+
 }
 
 html {
@@ -16,7 +17,7 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 	transition: background 0.5s ease;
 }
 

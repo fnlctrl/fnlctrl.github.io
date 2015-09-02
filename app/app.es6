@@ -6,13 +6,12 @@ import angular from 'angular'
 import ngAnimate from 'angular-animate'
 import ngSanitize from 'angular-sanitize'
 import uiRouter from 'angular-ui-router'
-import '../css/fonts.css'
 
 /**
  * app
  */
 
-import '../css/style.css'
+import './app.css'
 import './themes/themes.css'
 import config from './app.config'
 import core from './core/core.controller'
