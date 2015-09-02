@@ -53,12 +53,13 @@ nav {
 		transform: scaleX(0.01);
 		transform-origin: 0 50%;
 		will-change: transform;
-		transition: all 0.1s 50ms ease, transform 0.1s 50ms ease-out;
+		transition: all 0.2s 50ms ease, transform 0.1s 50ms ease-out;
 	}
 
 	.nav-dot:hover .nav-dot-hint {
-		transform: scaleX(1);
+		transform: scaleX(1) translateX(-50%);
 		opacity: 1;
+		left: 50%;
 		pointer-events: auto;
 	}
 }
@@ -78,7 +79,6 @@ nav {
 	.nav-dot {
 		float: left;
 		margin: 0 20px 0 0;
-		color: rgba(255, 255, 255, 0.6);
 	}
 
 	.nav-dot.active .nav-dot-hint {

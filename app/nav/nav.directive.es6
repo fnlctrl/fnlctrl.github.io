@@ -8,16 +8,12 @@ class Nav {
 		this.controllerAs = 'nav';
 	}
 
-	controller($location) {
+	controller($location, $rootScope, $element) {
 		'ngInject';
+		$rootScope.$on('ui:toggleVisibility', ()=> {$element.toggleClass('hidden')});
 
-		this.views = [
-			'designs',
-			'projects',
-			'resume'
-		];
-
-		this.checkActive = (path)=> {
+		this.views = ['designs', 'projects', 'resume'];
+		this.checkActive = path => {
 			if ($location.path().substr(1, path.length) === path) {
 				return 'active'
 			} else {

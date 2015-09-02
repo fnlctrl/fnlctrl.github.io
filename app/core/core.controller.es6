@@ -1,13 +1,15 @@
 class CoreController {
-	constructor($rootScope) {
+	constructor($rootScope, Document) {
 		"ngInject";
 		this.$rootScope = $rootScope;
 		this.theme = 'theme-mono';
+		this.designs = Document.designs;
 
 		var themes = {
-			'designs': 'blue',
-			'projects': 'green',
-			'resume': 'cyan'
+			designs: 'mono',
+			details: 'mono',
+			projects: 'blue',
+			resume: 'cyan'
 		};
 
 		$rootScope.$on('$stateChangeStart', (event, toState)=> {
@@ -16,7 +18,7 @@ class CoreController {
 	}
 
 	hideSidebar() {
-		this.$rootScope.$emit('sidebar:hide');
+		this.$rootScope.$emit('sidebar:collapse');
 	}
 }
 

@@ -6,18 +6,11 @@ class Gallery {
 		this.restrict = 'E';
 		this.template = template;
 		this.controllerAs = 'gallery';
-		this.scope = {
-			data: '='
-		}
 	}
 
-	controller($scope, $element) {
+	controller($element, Document) {
 		'ngInject';
-		this.data = $scope.data;
-	}
-
-	link(scope, elem, attrs, controller) {
-
+		this.data = Document.split($element.attr('doc-name'), 'h1');
 	}
 
 	static getInstance() {

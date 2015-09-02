@@ -60,8 +60,6 @@
 
 .resume-container blockquote {
 	margin-top: 32px;
-	-webkit-column-break-inside: avoid;
-	page-break-inside: avoid;
 	break-inside: avoid;
 }
 

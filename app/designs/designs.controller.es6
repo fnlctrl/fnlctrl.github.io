@@ -1,6 +1,5 @@
 class DesignsController {
 	constructor() {
-		this.data = [1,2,3];
 	}
 }
 

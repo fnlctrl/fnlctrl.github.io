@@ -1,0 +1,42 @@
+.detail-text {
+	float: right;
+	width: 30%;
+	height: 100%;
+	overflow: auto;
+}
+
+.detail-images {
+	float: left;
+	width: 65%;
+	height: 100%;
+	overflow: auto;
+}
+
+.detail-images li {
+	display: block;
+	list-style: none;
+}
+
+.detail-images li img {
+	width: 95%;
+}
+
+.detail-close {
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	border-radius: 50%;
+	height: 36px;
+	width: 36px;
+	text-align: center;
+	line-height: 36px;
+	background: #999;
+	color: #fff;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	/*box-shadow: inset 0 0 0 1px;*/
+}
+
+.detail-close:hover {
+	background: #333;
+}

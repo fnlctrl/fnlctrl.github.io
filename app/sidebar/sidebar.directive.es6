@@ -12,21 +12,27 @@ class Sidebar {
 
 	controller($rootScope, $element) {
 		'ngInject';
-		$rootScope.$on('sidebar:hide', ()=> {$element.removeClass('active');});
+		$rootScope.$on('sidebar:collapse', ()=> {$element.removeClass('active');});
+		$rootScope.$on('ui:toggleVisibility', ()=> {$element.toggleClass('hidden')});
+
 		this.skills = skills;
 		this.contacts = contacts;
-		this.toggle = ()=> {$element.toggleClass('active');}
+		this.svgIcons = Object.keys(contacts).reduce((prev, curr)=> {
+			prev[curr] = require(`../../img/ic-${curr}.svg`);
+			return prev;
+		}, {});
+		this.toggle = ()=> {$element.toggleClass('active')};
 	}
 
 	link(scope, elem, attrs, controller) {
 		var styles = Object.keys(controller.skills).reduce((prev, curr)=> {
-			curr = controller.skills[curr];
+			var color = controller.skills[curr].style.color;
 			return prev + `
-				._${curr.style.color}:hover path{
-					fill: #${curr.style.color};
+				._${color}:hover path{
+					fill: #${color};
 				}
-				._${curr.style.color} .sidebar-skills-item-background {
-					background: #${curr.style.color};
+				._${color} .sidebar-skills-item-background {
+					background: #${color};
 				}
 			`
 		}, '');

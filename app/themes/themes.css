@@ -3,6 +3,30 @@
  */
 .mono {
 	background: #fff;
+	color: #444;
+}
+
+.mono sidebar.active {
+	background:#fff;
+}
+
+.mono .view {
+	color: #333;
+}
+
+.mono .sidebar-skills-item-alias {
+	box-shadow: inset 0 0 0 2px #444;
+}
+
+@media(min-width:640px) {
+	.mono .nav-dot {
+		background: #777;
+	}
+
+	.mono .nav-dot-hint {
+		color: #fff;
+		background: #777;
+	}
 }
 
 /**
@@ -10,6 +34,7 @@
  */
 .blue {
 	background: #0094C7;
+	color: #fff;
 }
 
 .blue .nav-dot-hint {
@@ -21,6 +46,7 @@
  */
 .cyan {
 	background: #00C4B9;
+	color: #fff;
 }
 
 .cyan .nav-dot-hint {
@@ -32,6 +58,7 @@
  */
 .green {
 	background: #00C267;
+	color: #fff;
 }
 
 .green .nav-dot-hint {

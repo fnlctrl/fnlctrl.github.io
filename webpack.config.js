@@ -3,7 +3,6 @@ var webpack = require('webpack'),
 	path = require('path');
 
 var APP = path.join(__dirname, 'app');
-var libDir = path.join(__dirname, '/lib');
 
 module.exports = {
 	context: APP,
@@ -11,9 +10,9 @@ module.exports = {
 		app: ['./app.es6']
 	},
 	output: {
-		path: './build',
+		path: './',
 		filename: 'bundle.js',
-		publicPath: 'build'
+		publicPath: ''
 	},
 	module: {
 		loaders: [
@@ -31,7 +30,7 @@ module.exports = {
 			//	loaders: ['url?limit=10000', 'img?minimize&optimizationLevel=5']
 			//},
 			{
-				test: /\.html$/,
+				test: /\.(html|svg)$/,
 				loader: "raw"
 			},
 			{
@@ -44,9 +43,6 @@ module.exports = {
 			}]
 	},
 	resolve: {
-		extensions: ['', '.es6', '.js', '.html'],
-		alias: {
-			FTColumnflow: path.join(libDir, 'FTColumnflow.js')
-		}
+		extensions: ['', '.es6', '.js', '.html']
 	}
 };

@@ -2,10 +2,10 @@
  * views
  */
 
-import projectsTpl from './projects/projects'
-import designsTpl from './designs/designs'
-import resumeTpl from './resume/resume'
-import detailsTpl from './details/details'
+import projectsTpl from './projects/projects.html'
+import designsTpl from './designs/designs.html'
+import resumeTpl from './resume/resume.html'
+import detailTpl from './detail/detail.html'
 
 export default ($stateProvider, $locationProvider, $urlRouterProvider) => {
 	'ngInject';
@@ -28,9 +28,10 @@ export default ($stateProvider, $locationProvider, $urlRouterProvider) => {
 			controller: 'ResumeController',
 			controllerAs: 'resume'
 		})
-		.state('details', {
+		.state('detail', {
 			url: '/{category:designs|resume}/:name',
-			template: detailsTpl
+			template: detailTpl,
+			controller: 'DetailController',
+			controllerAs: 'detail'
 		});
-
 }

@@ -20,7 +20,20 @@ import nav from './nav/nav.directive'
 import resume from './resume/resume.controller'
 import designs from './designs/designs.controller'
 import gallery from './gallery/gallery.directive'
+import markdown from './markdown/markdown.service'
+import document from './document/document.service'
+import detail from './detail/detail.controller'
 //import column from './column/column.directive'
+
+window.time = (name,callback)=>{
+	var t1 = +new Date;
+	for (var i=0;i<1000;i++) {
+		callback();
+	}
+	var t2 = +new Date;
+	console.log(name);
+	console.log(t2 - t1);
+};
 
 angular
 	.module('portfolio', [
@@ -32,7 +45,9 @@ angular
 		nav,
 		resume,
 		designs,
-		gallery
-		//column
+		gallery,
+		markdown,
+		document,
+		detail
 	])
 	.config(config);
