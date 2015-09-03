@@ -7,7 +7,7 @@ class CoreController {
 
 		var themes = {
 			designs: 'mono',
-			details: 'mono',
+			detail: 'mono',
 			projects: 'blue',
 			resume: 'cyan'
 		};

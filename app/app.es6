@@ -25,9 +25,9 @@ import document from './document/document.service'
 import detail from './detail/detail.controller'
 //import column from './column/column.directive'
 
-window.time = (name,callback)=>{
+window.perftest = (name,callback)=>{
 	var t1 = +new Date;
-	for (var i=0;i<1000;i++) {
+	for (var i=0;i<10000;i++) {
 		callback();
 	}
 	var t2 = +new Date;

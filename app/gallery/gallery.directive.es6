@@ -10,7 +10,7 @@ class Gallery {
 
 	controller($element, Document) {
 		'ngInject';
-		this.data = Document.split($element.attr('doc-name'), 'h1');
+		this.data = Document.split($element.attr('doc-name'), 'h4');
 	}
 
 	static getInstance() {

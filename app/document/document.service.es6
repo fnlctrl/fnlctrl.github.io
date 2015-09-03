@@ -28,10 +28,10 @@ class Document {
 
 	setupEntry(doc) {
 		var Markdown = this.Markdown;
-		var parsed = Markdown.splitByTagName(Markdown.getDom(doc), 'h1');
+		var parsed = Markdown.splitByTagName(Markdown.getDom(doc), 'h4');
 		parsed.forEach(item => {
-			var link = item[0].childNodes[0].attributes[0].value;
-			console.log();
+			var temp = angular.element('<div>').append(angular.element(item));
+			var link = temp.find('h1').find('a')[0].attributes[0].value;
 			this.entryByLink[link] = item;
 		});
 	}

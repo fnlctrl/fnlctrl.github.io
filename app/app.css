@@ -31,6 +31,10 @@ a {
 	display: inline-block;
 }
 
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
 [ease-2] {
 	transition: all 0.2s ease;
 }
