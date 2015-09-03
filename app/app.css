@@ -9,6 +9,7 @@ html {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
+	text-rendering: optimizeLegibility;
 }
 
 body {
@@ -29,6 +30,15 @@ a {
 	text-decoration: none;
 	color: inherit;
 	display: inline-block;
+}
+
+p {
+	text-align: justify;
+}
+
+img {
+	max-width: 100%;
+	display: block;
 }
 
 * {
@@ -57,7 +67,6 @@ a {
 	text-align: center;
 	width: 100%;
 	font-weight: 100;
-	font-family: sans-serif, 'Arial';
 }
 
 .copyright span {
