@@ -7,17 +7,22 @@ class Detail {
 		this.$location = $location;
 		$rootScope.$emit('ui:toggleVisibility');
 		$scope.$on('$destroy', () => {$rootScope.$emit('ui:toggleVisibility')});
-
-		[this.images,this.text] = this.getContent($location.path());
+		this.getContents($location.path());
 	}
 
-	getContent(path) {
-		var data = this.Document.getEntry(path);
-		var temporaryDom = angular.element('<div>').append(data);
-		var images = temporaryDom.find('ul')[0].outerHTML;
-		temporaryDom.find('ul').detach();
-		var text = temporaryDom.html();
-		return [images, text]
+	getContents(path) {
+		this.Document
+			.setupEntries(path.split('/')[1])
+			.then(() => {
+				var data = this.Document.getEntry(path);
+				console.log(data);
+				var temporaryDom = angular.element('<div>').append(data);
+				var images = temporaryDom.find('ul')[0].outerHTML;
+				temporaryDom.find('ul').detach();
+				var text = temporaryDom.html();
+				this.images = images;
+				this.text = text;
+			})
 	}
 
 	close() {

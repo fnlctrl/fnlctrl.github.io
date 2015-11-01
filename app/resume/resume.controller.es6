@@ -15,7 +15,9 @@ class ResumeController {
 		observer.observe(resumeContainer, {childList: true});
 		setTimeout(() => {observer.disconnect()}, 1000);
 
-		this.data = Markdown.wrap(Document.data.resume, ['h1', 'h2'], 'blockquote');
+		Document.getDocument('resume').then((result)=>{
+			this.data = Markdown.wrap(result.data, ['h1', 'h2'], 'blockquote');
+		});
 	}
 }
 

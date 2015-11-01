@@ -6,7 +6,7 @@
 - ![yearbook-1](img/designs/yearbook-1.png)
 
 当时项目组里平设的小伙伴都(fang)没(ge)来(zi)，我就自己把设计/排版都做完了(笑)，用了十天。  
-因为要符合领导审美，所以设计上中规中矩。
+因为要符合领导审美，所以设计上比较中规中矩。
 
 [PDF](http://pan.baidu.com/s/1pJ5Sz5x)
 
@@ -35,7 +35,7 @@
 ### 2010.10
 - ![the-brilliance-logo-1](img/designs/the-brilliance-logo-1.svg)
 
-蝴蝶图案是素材中找到的，在AI里用钢笔描了一下。那时候Adobe Kuler(现在改名为 Adobe Color)刚上线，用它做了几个配色。
+蝴蝶图案是在素材中找到的，在AI里用钢笔描了一下。那时候Adobe Kuler(现在的Adobe Color)刚上线，用它做了几个配色。
 
 #### ![Thumbnail](img/avatar.jpg)
 # [校刊《琉璃》](designs/the-brilliance)

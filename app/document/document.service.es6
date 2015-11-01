@@ -1,22 +1,16 @@
-import resume from '../../documents/resume.md'
-import designs from '../../documents/designs.md'
-
 class Document {
-	constructor(Markdown) {
+	constructor(Markdown, $http, $q) {
 		'ngInject';
 		this.Markdown = Markdown;
-		this.data = {resume, designs};
+		this.$http = $http;
+		this.$q = $q;
 		this.entryByLink = {};
 		this.cache = {};
-		this.setupEntry(designs);
+		this.processed = {};
 	}
 
-	split(docName, tagName) {
-		if (!docName) return;
-		if (!this.cache[docName + tagName]) {
-			this.cache[docName + tagName] = this.Markdown.split(this.data[docName], tagName);
-		}
-		return this.cache[docName + tagName]
+	getDocument(docName) {
+		return this.$http.get(`documents/${docName}.md`, {cache: true})
 	}
 
 	getEntry(link) {
@@ -26,14 +20,22 @@ class Document {
 		return this.entryByLink[link];
 	}
 
-	setupEntry(doc) {
-		var Markdown = this.Markdown;
-		var parsed = Markdown.splitByTagName(Markdown.getDom(doc), 'h4');
-		parsed.forEach(item => {
-			var temp = angular.element('<div>').append(angular.element(item));
-			var link = temp.find('h1').find('a')[0].attributes[0].value;
-			this.entryByLink[link] = item;
-		});
+	setupEntries(docName) {
+		if (this.processed[docName]) {
+			return this.$q.when();
+		} else {
+			return this.getDocument(docName).then(result => {
+				var Markdown = this.Markdown;
+				Markdown
+					.splitByTagName(Markdown.getDom(result.data), 'h4')
+					.forEach(item => {
+						var temp = angular.element('<div>').append(angular.element(item));
+						var link = temp.find('h1').find('a')[0].attributes[0].value;
+						this.entryByLink[link] = item;
+					});
+				this.processed[docName] = true;
+			})
+		}
 	}
 }
 

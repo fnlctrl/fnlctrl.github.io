@@ -8,9 +8,13 @@ class Gallery {
 		this.controllerAs = 'gallery';
 	}
 
-	controller($element, Document) {
+	controller($element, Document, Markdown) {
 		'ngInject';
-		this.data = Document.split($element.attr('doc-name'), 'h4');
+		if ($element.attr('doc-name')) {
+			Document.getDocument($element.attr('doc-name')).then(result => {
+				this.data = Markdown.split(result.data, 'h4');
+			});
+		}
 	}
 
 	static getInstance() {
