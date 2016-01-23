@@ -1,2 +1,2 @@
 My portfolio.  
-Built with angular, webpack and ES6.
+Built with vue, webpack and ES6.

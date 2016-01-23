@@ -1,48 +1,49 @@
 'use strict';
-var webpack = require('webpack'),
-	path = require('path');
-
-var APP = path.join(__dirname, 'app');
+var webpack = require('webpack');
+var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-	context: APP,
+	context: path.join(__dirname, 'src'),
 	entry: {
-		app: ['./app.es6']
+		'bundle': './'
 	},
 	output: {
-		path: './',
-		filename: 'bundle.js',
-		publicPath: ''
+		path: './dist',
+		filename: '[name].js',
+		publicPath: 'dist' // for dev server
 	},
 	module: {
-		loaders: [
-			{
-				test: /\.es6$/,
-				exclude: /(node_modules|bower_components)/,
-				loader: 'ng-annotate!babel'
-			},
-			{
-				test: /\.css$/,
-				loader: "style!raw!autoprefixer"
-			},
-			//{
-			//	test: /\.(jpe?g|png|gif|svg)$/i,
-			//	loaders: ['url?limit=10000', 'img?minimize&optimizationLevel=5']
-			//},
-			{
-				test: /\.(html|svg)$/,
-				loader: "raw"
-			},
-			{
-				test: /\.md$/,
-				loader: "raw"
-			},
-			{
-				test: /\.json$/,
-				loader: 'json'
-			}]
+		loaders: [{
+			test: /\.js$/,
+			loader: 'babel',
+			exclude: /node_modules/
+		}, {
+			test: /\.(less|css)$/,
+			loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
+		}, {
+			test: /\.(png|svg)$/,
+			loader: "url?limit=10000000000000000000000"
+		}, {
+			test: /\.html$/,
+			loader: 'vue-html'
+		}, {
+			test: /\.md$/,
+			loader: "raw"
+		}]
 	},
 	resolve: {
-		extensions: ['', '.es6', '.js', '.html']
+		modulesDirectories: ['src', 'data', 'components', 'node_modules', 'lib']
+	},
+	plugins: [
+		new ExtractTextPlugin("[name].css", {allChunks: true})
+	],
+	devServer: {
+		port: 1234,
+		inline: true,
+		host: "0.0.0.0",
+		historyApiFallback: {
+			index: 'src/index.html'
+		}
 	}
 };
