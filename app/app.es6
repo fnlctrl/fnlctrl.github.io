@@ -12,7 +12,7 @@ import uiRouter from 'angular-ui-router'
  */
 
 import './app.css'
-import './themes/themes.css'
+import './../src/themes.css'
 import config from './app.config'
 import core from './core/core.controller'
 import sidebar from './sidebar/sidebar.directive'
