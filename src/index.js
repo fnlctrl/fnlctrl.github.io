@@ -16,12 +16,12 @@ import designs from 'views/designs';
 import projects from 'views/projects';
 
 var app = {
-    components: {navigation,about},
+    components: {navigation, about},
     data: () => ({
         theme: 'mono'
     }),
-    ready() {
-        this.$on('theme:set', theme => this.theme = theme);
+    events: {
+        'theme:set'(theme) {this.theme = theme; }
     }
 };
 var router = new VueRouter({
