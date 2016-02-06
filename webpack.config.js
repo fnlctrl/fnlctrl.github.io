@@ -22,7 +22,7 @@ module.exports = {
             test: /\.(less|css)$/,
             loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
         }, {
-            test: /\.png$/,
+            test: /\.(png|jpg)$/,
             loader: "url?limit=10000000000000000000000"
         }, {
             test: /\.(html|svg)/,

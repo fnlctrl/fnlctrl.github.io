@@ -1,6 +1,6 @@
 export default {
-    github: require('../../../assets/images/ic-github.svg'),
-    gplus: require('../../../assets/images/ic-gplus.svg'),
-    star: require('../../../assets/images/ic-star.svg'),
-    zhihu: require('../../../assets/images/ic-zhihu.svg')
+    github: require('../../icons/ic-github.svg'),
+    gplus: require('../../icons/ic-gplus.svg'),
+    star: require('../../icons/ic-star.svg'),
+    zhihu: require('../../icons/ic-zhihu.svg')
 };
