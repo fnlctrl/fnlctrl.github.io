@@ -9,20 +9,19 @@
 ### Adobe InDesign  
 ### Adobe Photoshop  
 ### Javascript  
-### jQuery  
+### Vue
 ### AngularJS  
-### Python  
+### Webpack/Gulp
 ### NodeJS  
 ### git  
 ### SVG  
-
 
 # 经历
 
 ## 杭州熵功场科技有限公司
 ### 前端开发工程师
 #### 2015.10 - 
-- [CATCH WebApp](http://app.catch.cc/) 前端开发者之一
+- [CATCH Android](http://app.catch.cc/) 前端开发者
 
 ## 阿里巴巴<br>技术保障部UED
 ### 前端开发工程师 (实习)
@@ -48,10 +47,13 @@
 
 # 项目
 
-## [CATCH WebApp](http://app.catch.cc/)
+## [CATCH Android](http://app.catch.cc/)
 ### 前端工程师
-#### 2015.10
-使用了Vue.js, webpack, ES6
+#### 2015.10 - 
+安卓端使用crosswalk内嵌网页前端实现。<br>
+视图库使用Vue.js。<br>
+构建工具Webpack+Gulp+Babel。<br>
+开发语言ES6 (只使用Babel编译时 + Promise)。
 
 ## [浙江大学第三届<br>青年电影节网站](http://yff.zjuqsc.com)
 ### 设计师, 前端工程师, 项目负责人

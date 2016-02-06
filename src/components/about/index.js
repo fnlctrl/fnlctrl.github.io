@@ -24,6 +24,9 @@ export default {
 			`
         }, '')
     }),
+    events: {
+        'about:hide'() { this.active = false; }
+    },
     watch: {
         active(val) {
             if (val) {
@@ -32,7 +35,5 @@ export default {
                 this.$el.className = this.$el.className.replace(' active', '')
             }
         }
-    },
-    ready() {
     }
 };

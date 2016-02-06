@@ -33,7 +33,7 @@ export default {
     },
     "javascript": {
         "alias": "JavaScript",
-        "star": "3.5",
+        "star": "4",
         "style": {
             "shape": "rectangle",
             "color": "F0DB4F"
@@ -41,10 +41,18 @@ export default {
     },
     "jquery": {
         "alias": "jQuery",
-        "star": "3.5",
+        "star": "4",
         "style": {
             "shape": "rectangle",
             "color": "7BD6FD"
+        }
+    },
+    "Vue": {
+        "alias": "Vue",
+        "star": "4.5",
+        "style": {
+            "shape": "rectangle",
+            "color": "41B883"
         }
     },
     "angularjs": {
@@ -57,7 +65,7 @@ export default {
     },
     "nodejs": {
         "alias": "Node.js",
-        "star": "1",
+        "star": "2",
         "style": {
             "shape": "rectangle",
             "color": "80BD01"

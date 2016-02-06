@@ -8,8 +8,9 @@
 </head>
 <body :class="theme">
 <about></about>
-<router-view transition="crossfade"></router-view>
+<router-view @click="hideAbout" transition="crossfade"></router-view>
 <navigation></navigation>
+<div class="copyright">Copyright (C) 2014-2016 SongShuoyun. All rights reserved.</div>
 <script src="/dist/bundle.js"></script>
 </body>
 </html>

@@ -1,0 +1,117 @@
+.resume-container {
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: justify;
+  h1 {
+    font-weight: 100;
+    font-size: 28px;
+    line-height: 32px;
+    width: 100%;
+    opacity: 0.7;
+    position: relative;
+    will-change: opacity;
+    -webkit-column-break-before: always;
+    page-break-before: always;
+    break-before: always;
+    &:nth-of-type(2) { /*技术一栏*/
+      margin-top: 32px;
+      -webkit-column-break-before: auto;
+      page-break-before: auto;
+      break-before: auto;
+    }
+    ~ *:not(h1) {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  h2 {
+    line-height: 32px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  h1 + h2 {
+    margin-left: 0;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 8px;
+    font-weight: 400;
+  }
+  h4 {
+    font-weight: 200;
+    opacity: 0.7;
+    will-change: opacity;
+  }
+  h4 + * {
+    margin-top: 16px;
+  }
+  blockquote {
+    margin-top: 32px;
+    /*page-break-inside: avoid;*/
+    break-inside: avoid;
+  }
+  h1 + blockquote {
+    margin-top: 0;
+  }
+  a {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    &:hover {
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .resume-container {
+    column-count: 100;
+    column-width: 260px;
+    column-gap: 20px;
+    overflow-x: auto;
+    &::-webkit-scrollbar-track {
+      background: linear-gradient(
+              to bottom,
+              transparent 0%,
+              transparent 30%,
+              rgba(255, 255, 255, 0.5) 50%,
+              transparent 70%,
+              transparent 100%
+      )
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #fff;
+    }
+    ul {
+      padding-left: 1.4em;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .resume-container {
+    overflow-x: visible;
+    blockquote {
+      margin-top: 32px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+      &:nth-of-type(n+2) {
+        margin-top: 40px;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 24px;
+    }
+  }
+}
