@@ -23,7 +23,7 @@ module.exports = {
             loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
         }, {
             test: /\.(png|jpg)$/,
-            loader: "url?limit=10000000000000000000000"
+            loader: "url"
         }, {
             test: /\.(html|svg)/,
             loader: 'vue-html'
