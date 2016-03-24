@@ -1,5 +1,5 @@
 /* sidebar normal */
-about {
+profile {
   position: fixed;
   width: 320px;
   padding: 30px;
@@ -161,7 +161,7 @@ about {
   }
 }
 
-about.active {
+profile.active {
   background: rgba(0, 0, 0, 0.3);
   transform: translateX(-176px);
   pointer-events: auto;
@@ -180,10 +180,9 @@ about.active {
       transform: scale(1);
     }
   }
-}
-
-about.active ~ * {
-  transform: translateX(-320px);
+  ~ * {
+    transform: translateX(-320px);
+  }
 }
 
 @keyframes glow {

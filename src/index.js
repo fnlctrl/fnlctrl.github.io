@@ -2,16 +2,20 @@
 import 'index.less';
 import 'themes.less';
 
-
 /* Libs */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-Vue.use(VueRouter);
-Vue.config.debug = true;
+import VueI18n from 'vue-i18n';
+
+/* Locales */
+import locales from 'locales';
+
+Vue.use(VueRouter).use(VueI18n, {lang: 'en', locales});
+Vue.config.debug = /localhost/.test(location.href);
 
 /* Components */
 import navigation from 'navigation';
-import about from 'about';
+import profile from 'profile';
 
 /* Views */
 import index from 'views/index';
@@ -21,7 +25,7 @@ import projects from 'views/projects';
 import detail from 'views/detail';
 
 var app = {
-    components: {navigation, about},
+    components: {navigation, profile},
     data: () => ({
         theme: 'mono'
     }),

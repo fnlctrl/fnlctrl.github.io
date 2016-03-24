@@ -25,5 +25,10 @@ export default {
     }),
     ready() {
         this.$dispatch('theme:set', 'cyan');
+    },
+    methods: {
+        scroll(e) {
+            this.$els.contents.scrollLeft += -e.wheelDelta / 2;
+        }
     }
 };

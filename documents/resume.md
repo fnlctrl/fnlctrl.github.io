@@ -1,10 +1,10 @@
-# 教育
+# Education
 
-## 浙江大学
-### 电子科学与技术
+## Zhejiang University
+### Information Science & Electronic Engineering
 #### 2013.09 - 2017.07
 
-# 技术
+# Technologies
 ### Adobe Illustrator  
 ### Adobe InDesign  
 ### Adobe Photoshop  
@@ -16,56 +16,73 @@
 ### git  
 ### SVG  
 
-# 经历
+# Experiences
 
-## 杭州熵功场科技有限公司
-### 前端开发工程师
-#### 2015.10 - 
-- [CATCH Android](http://app.catch.cc/) 前端开发者
-
-## 阿里巴巴<br>技术保障部UED
-### 前端开发工程师 (实习)
+## [Hangzhou <br>Entropy Lab Inc.](http://catch.cc/)
+### Frontend Developer
+#### 2015.10 - present
+- [CATCH Android](http://app.catch.cc/)<br>
+  Main developer of CATCH web-app (embedded in android apk).
+  
+## AIS UED
+### (Alibaba Infrastructure Service <br> User Experience Design)
+### Frontend Developer (Intern)
 #### 2015.07 - 2015.09
-- 负责阿里内外卡片应用'请客宝'的前端开发
-- 参与了三个大屏项目的前端开发
+- Led the frontend development of the internal app "请客宝" ("Help-u-treat"), 
+  It's a small app built to help employees order drinks/snacks for each other.
+- Actively participated in the development of three "Big-screen" projects. 
+  They are web-apps tailored for local governments and other big customers for monitoring the status of their "阿里云"(Ali-Cloud) applications,
+  featuring real-time charts and data visualizations about Network Traffic and Requests, Security, Loop-holes Detection, etc.
+  They are deployed on very large screens at control rooms and exhibition centers, hence the name "Big-screen".
 
-## 浙江大学求是潮<br>水朝夕工作室
-### 设计师, 前端工程师, 副总监
-#### 2013.10 - 2015.06  
-- 负责浙江大学第二届青年电影节的VI设计、宣传品设计。  
-- 负责浙江大学第二届青年电影节网站的设计、开发。  
-- 负责浙江大学新生手册(2014)纸质版的设计。  
-- 负责求是潮水朝夕工作室主页的设计与前后端开发。  
-- 负责求是潮2014-2015年鉴的设计、排版。  
-- 开办了求是潮内部的"平面制作基础"课程。  
+## ZJU QSCTide
+### (Student Organization)
+### Designer, Frontend Developer, vice Director
+#### 2013.10 - 2015.06 
+- Produced the VI for ZJU 2nd Youth Film Festival
+- and orchestrated the design and the development of the website
+- Designed and produced the ZJU Freshmen Guide (2014) Print Edition
+- Organized the design and development of the organization's blog.
+- Produced the organization's Yearbook 2014-2015
+- Launched a training program about Graphical Design for fellow students.
 
-## 上海市第二中学<br>校刊部
-### 美术编辑, 主编
+## Shanghai No.2 High School<br>School Magazine Dept.
+### Art Editor, Chief Editor
 #### 2010 - 2013
-- 设计了校刊的新Logo,沿用至今  
-- 负责了四期校刊的设计、组稿、制作  
+- Designed the new logo
+- Coordinated the productions of four issues of school magazine (one per semester) 
 
-# 项目
+# Projects
 
-## [CATCH Android](http://app.catch.cc/)
-### 前端工程师
-#### 2015.10 - 
-安卓端使用crosswalk内嵌网页前端实现。<br>
-视图库使用Vue.js。<br>
-构建工具Webpack+Gulp+Babel。<br>
-开发语言ES6 (只使用Babel编译时 + Promise)。
+## [CATCH](http://app.catch.cc/)
+### Frontend developer
+#### 2015.10 - present
 
-## [浙江大学第三届<br>青年电影节网站](http://yff.zjuqsc.com)
-### 设计师, 前端工程师, 项目负责人
+Tech Stack: crosswalk, vuejs(vue-router, vuex), webpack, gulp, babel
+
+Written in ES6, it's a fully fledged CRUD web-app for browsing and managing photos, albums and orders, purchasing with alipay, and so on.
+It implements all the features of the iOS App, and is optimized for performance (for example, the creation and usage of [list-view](https://github.com/CatchLabs/vue-list-view/)).
+
+## [ZJU 3rd Youth Film Festival Website](http://yff.zjuqsc.com)
+### Designer, Frontend Developer, Project Lead
 #### 2015.03 - 2015.05
-采用了Material Design, 完全适配桌面/移动设备。
 
-## [水朝夕线上杂志](http://tide.myqsc.com)
-### 设计师, 前后端工程师, 项目负责人
+Tech Stack: Angular1.4(with ui-router)<br>
+
+The website to display information about events, activities and films during the festival.
+It utilizes Google Material Design, featuring a consistent experience across all devices.
+
+## [Tide Magazine](http://tide.myqsc.com)
+### Designer, Frontend Developer, Project Lead
 #### 2014.09 - 2015.06
-- 桌面版模仿了纸质杂志的翻页效果，完全自适应，支持触摸手势。  
-- 移动版采用了Material Design，支持添加到主屏幕。
+Tech Stack: Wordpress, jQuery
 
-## [浙江大学第二届<br>青年电影节网站](http://site.zjuqsc.com/zjuyff-2014)
-### 设计师, 前端工程师, 项目负责人
+- The desktop version is dedicated to simulating a printed magazine, with paper-like animations.
+- The mobile version uses Material Design, for simplicity (need to simulate user-agent to view on PCs)
+
+## [ZJU 2nd Youth Film Festival Website](http://site.zjuqsc.com/zjuyff-2014)
+### Designer, Frontend Developer, Project Lead
 #### 2014.03 - 2014.05
+
+The old website, created by my fellow teammates and me, who just started exploring the world of web development,
+Simple yet beautiful.
