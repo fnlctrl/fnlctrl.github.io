@@ -84,5 +84,5 @@ Tech Stack: Wordpress, jQuery
 ### Designer, Frontend Developer, Project Lead
 #### 2014.03 - 2014.05
 
-The old website, created by my fellow teammates and me, who just started exploring the world of web development,
+The old website, created by my fellow teammates and me, who just started exploring the world of web development.
 Simple yet beautiful.
