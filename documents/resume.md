@@ -21,7 +21,7 @@
 ## [Hangzhou <br>Entropy Lab Inc.](http://catch.cc/)
 ### Frontend Developer
 #### 2015.10 - present
-- [CATCH Android](http://app.catch.cc/)<br>
+- [CATCH Android](http://app.catch.cc/?skipintro)<br>
   Main developer of CATCH web-app (embedded in android apk).
   
 ## AIS UED
@@ -54,7 +54,7 @@
 
 # Projects
 
-## [CATCH](http://app.catch.cc/)
+## [CATCH](http://app.catch.cc/?skipintro)
 ### Frontend developer
 #### 2015.10 - present
 
