@@ -1,4 +1,5 @@
 <div class="view" :class="theme">
+    <router-view :data="gallery"></router-view>
     <div class="view-header">
         <div class="view-title">
             Designs
@@ -10,5 +11,4 @@
     <div class="view-content">
         <gallery :data="gallery"></gallery>
     </div>
-    <router-view :data="gallery"></router-view>
 </div>
