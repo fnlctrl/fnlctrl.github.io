@@ -31,22 +31,6 @@ export default {
             "color": "FEB127"
         }
     },
-    "javascript": {
-        "alias": "JavaScript",
-        "star": "4",
-        "style": {
-            "shape": "rectangle",
-            "color": "F0DB4F"
-        }
-    },
-    "jquery": {
-        "alias": "jQuery",
-        "star": "4",
-        "style": {
-            "shape": "rectangle",
-            "color": "7BD6FD"
-        }
-    },
     "Vue": {
         "alias": "Vue",
         "star": "4.5",
@@ -77,14 +61,6 @@ export default {
         "style": {
             "shape": "rectangle",
             "color": "F44D27"
-        }
-    },
-    "webpack": {
-        "alias": "webpack",
-        "star": "3",
-        "style": {
-            "shape": "rectangle",
-            "color": "678dc9"
         }
     }
 }

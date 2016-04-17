@@ -1,102 +1,5 @@
-/* sidebar normal */
 profile {
-  position: fixed;
-  width: 320px;
-  padding: 30px;
-  box-sizing: border-box;
-  height: 100%;
-  right: -176px;
-  z-index: 99;
-  color: inherit;
-  transition: transform 0.3s ease;
-  pointer-events: none;
-  overflow: auto;
-  .header {
-    position: relative;
-    height: 84px;
-    pointer-events: auto;
-    .avatar {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      float: left;
-      margin: 0 20px 0 0;
-      position: relative;
-      &:hover img {
-        transform: scale(1);
-      }
-      &:after {
-        content: 'profile';
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        transition: all 0.2s ease;
-        pointer-events: none;
-      }
-      .background {
-        background: #fff;
-        top: 0;
-        opacity: 0.6;
-        animation: glow 3s ease infinite;
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        position: absolute;
-        transform: scale(1);
-        z-index: -1;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        cursor: pointer;
-        box-sizing: border-box;
-        transform: scale(0.8);
-      }
-    }
-  }
-  .section {
-    opacity: 0;
-    margin: 2vh 0 0 0;
-    pointer-events: none;
-    user-select: none;
-    transition: opacity 0.3s ease;
-  }
-  .about {
-    font-size: 30px;
-    font-weight: 500;
-    p {
-      font-size: 14px;
-      margin: 0;
-      font-weight: 400;
-    }
-  }
-  .contacts {
-    float: left;
-    height: 84px;
-    max-width: 156px;
-    opacity: 0;
-    h1 {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 6px 0 3px 0;
-    }
-    a {
-      display: inline-block;
-      position: relative;
-      color: inherit;
-      margin: 10px 6px 0 0;
-      opacity: 0.6;
-      &:hover {
-        opacity: 1;
-      }
-      object {
-        pointer-events: none;
-      }
-    }
-  }
+  display: block;
   .skills {
     h1 {
       font-weight: 500;
@@ -161,49 +64,194 @@ profile {
   }
 }
 
-profile.active {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateX(-176px);
-  pointer-events: auto;
-  .section {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .contacts {
-    opacity: 1;
-  }
-  .avatar {
-    &:after {
-      opacity: 0;
-    }
-    img {
-      transform: scale(1);
-    }
-  }
-  ~ * {
-    transform: translateX(-320px);
-  }
-}
-
-@keyframes glow {
-  from {
-    opacity: 0.6;
-    transform: scale(0.9)
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1)
-  }
-  to {
-    opacity: 0.6;
-    transform: scale(0.9)
-  }
-}
-
 @media (min-width: 640px) {
+  /* sidebar normal */
+  profile {
+    position: fixed;
+    width: 320px;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 100%;
+    right: -176px;
+    z-index: 99;
+    color: inherit;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    overflow: auto;
+    .header {
+      position: relative;
+      height: 84px;
+      pointer-events: auto;
+      .avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        float: left;
+        margin: 0 20px 0 0;
+        position: relative;
+        &:hover img {
+          transform: scale(1);
+        }
+        &:after {
+          content: 'profile';
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          text-align: center;
+          font-size: 12px;
+          transition: all 0.2s ease;
+          pointer-events: none;
+        }
+        .background {
+          background: #fff;
+          top: 0;
+          opacity: 0.6;
+          animation: glow 3s ease infinite;
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          position: absolute;
+          transform: scale(1);
+          z-index: -1;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          cursor: pointer;
+          box-sizing: border-box;
+          transform: scale(0.8);
+        }
+      }
+    }
+    .section {
+      opacity: 0;
+      margin: 2vh 0 0 0;
+      pointer-events: none;
+      user-select: none;
+      transition: opacity 0.3s ease;
+    }
+    .about {
+      font-size: 30px;
+      font-weight: 500;
+      p {
+        font-size: 14px;
+        margin: 0;
+        font-weight: 400;
+      }
+    }
+    .contacts {
+      float: left;
+      height: 84px;
+      max-width: 156px;
+      opacity: 0;
+      h1 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 6px 0 3px 0;
+      }
+      a {
+        display: inline-block;
+        position: relative;
+        color: inherit;
+        margin: 10px 6px 0 0;
+        opacity: 0.6;
+        &:hover {
+          opacity: 1;
+        }
+        object {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  profile.active {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateX(-176px);
+    pointer-events: auto;
+    .section {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .contacts {
+      opacity: 1;
+    }
+    .avatar {
+      &:after {
+        opacity: 0;
+      }
+      img {
+        transform: scale(1);
+      }
+    }
+    ~ * {
+      transform: translateX(-320px);
+    }
+  }
 
+  @keyframes glow {
+    from {
+      opacity: 0.6;
+      transform: scale(0.9)
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1)
+    }
+    to {
+      opacity: 0.6;
+      transform: scale(0.9)
+    }
+  }
 }
 
 @media (max-width: 640px) {
-
+  profile {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.2  );
+    .header {
+      .avatar {
+        float: left;
+        img {
+          height: 64px;
+          width: 64px;
+          margin-right: 20px;
+          border-radius: 50%;
+        }
+      }
+      .contacts {
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 20px;
+        h1, div {
+          display: none;
+        }
+        a {
+          margin-right: 4px;
+          svg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    .about {
+      overflow: hidden;
+    }
+    .skills {
+      margin-top: 16px;
+      h1 {
+        font-size: 20px;
+      }
+      .item {
+        clear: both;
+        width: 80%;
+        .alias, .stars {
+          float: left;
+        }
+      }
+    }
+  }
 }

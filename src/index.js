@@ -24,13 +24,15 @@ import designs from 'views/designs';
 import projects from 'views/projects';
 import detail from 'views/detail';
 
+import 'canvas-background';
+
 var app = {
     components: {navigation, profile},
     data: () => ({
         theme: 'mono'
     }),
     methods: {
-        hideAbout() {
+        hideProfile() {
             this.$broadcast('about:hide')
         }
     },
@@ -69,5 +71,7 @@ var map = {
     }
 };
 
-router.map(map);
+router.map(map).beforeEach(() => {
+    window.scrollTo(0,0);
+});
 router.start(app, 'body');
