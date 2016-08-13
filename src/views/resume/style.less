@@ -1,5 +1,4 @@
 .resume-container {
-  height: 100%;
   position: relative;
   font-size: 14px;
   line-height: 16px;
@@ -12,13 +11,13 @@
     opacity: 0.7;
     position: relative;
     -webkit-column-break-before: always;
-    page-break-before: always;
-    break-before: always;
+    //page-break-before: always;
+    //break-before: always;
     &:nth-of-type(2) { /*技术一栏*/
       margin-top: 32px;
       -webkit-column-break-before: auto;
-      page-break-before: auto;
-      break-before: auto;
+      //page-break-before: auto;
+      //break-before: auto;
     }
     ~ *:not(h1) {
       display: inline-block;
@@ -64,39 +63,23 @@
   }
 }
 
+/* Desktop */
 @media (min-width: 640px) {
   .resume-container {
     column-count: 100;
     column-width: 260px;
     column-gap: 20px;
-    overflow-x: auto;
-    &::-webkit-scrollbar-track {
-      background: linear-gradient(
-              to bottom,
-              transparent 0%,
-              transparent 30%,
-              rgba(255, 255, 255, 0.5) 50%,
-              transparent 70%,
-              transparent 100%
-      )
-    }
-    &::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background: #fff;
-    }
+    height: 100%;
     ul {
       padding-left: 1.4em;
     }
   }
 }
 
+/* Mobile */
 @media (max-width: 640px) {
   .resume-container {
-    overflow-x: visible;
+    //overflow-x: visible;
     blockquote {
       margin-top: 32px;
     }

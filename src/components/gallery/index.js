@@ -4,7 +4,6 @@ import MdT from 'md-transform';
 
 export default {
     template,
-    replace: false,
     props: {
         data: {
             type: Object,
@@ -13,7 +12,7 @@ export default {
     },
     methods: {
         redirect({target: {href}}) {
-            href && this.$route.router.go(href.replace(window.location.origin,''));
+            href && this.$router.push(href.replace(window.location.origin,''));
         }
     }
 };

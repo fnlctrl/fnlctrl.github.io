@@ -19,21 +19,30 @@ module.exports = {
             loader: 'babel',
             exclude: /node_modules/
         }, {
+            test: /\.vue$/,
+            loader: 'vue'
+        }, {
             test: /\.(less|css)$/,
             loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
         }, {
             test: /\.(png|jpg)$/,
             loader: "url"
         }, {
-            test: /\.(html|svg)/,
-            loader: 'vue-html'
+            test: /\.html/,
+            loader: 'html'
+        }, {
+            test: /\.svg/,
+            loader: 'svg-sprite'
         }, {
             test: /\.md$/,
             loader: "raw"
         }]
     },
     resolve: {
-        modulesDirectories: ['src', 'data', 'components', 'node_modules', 'lib']
+        modulesDirectories: ['src', 'data', 'icons', 'components', 'node_modules', 'lib']
+    },
+    htmlLoader: {
+        attrs: ['img:src', 'icon:name']
     },
     plugins: [
         new ExtractTextPlugin("[name].css", {allChunks: true})

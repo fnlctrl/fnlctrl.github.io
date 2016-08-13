@@ -1,4 +1,4 @@
-<div class="view" @wheel="scroll">
+<div class="resume-view" @wheel="scroll">
     <div class="view-header">
         <div class="view-title">Alan Song (宋铄运)</div>
 		<span class="view-description">
@@ -6,7 +6,7 @@
 			Frontend Developer
 		</span>
     </div>
-    <div class="view-content">
-        <div class="resume-container" v-el:contents>{{{ resumeHtml }}}</div>
+    <div class="view-content" ref="contents">
+        <div class="resume-container" v-html="resumeHtml"></div>
     </div>
 </div>

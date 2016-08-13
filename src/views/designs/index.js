@@ -22,9 +22,18 @@ export default {
                 html
             };
             return newObj;
-        }, {})
+        }, {}),
+        name: ''
     }),
-    ready() {
-        this.$dispatch('theme:set', 'mono');
+    fetchRouteData({params: {name}}) {
+        this.name = name;
+    },
+    methods: {
+        scroll(e) {
+            this.$refs.content.scrollLeft += -e.wheelDelta / 2;
+        }
+    },
+    activated() {
+        this.$emit('theme', 'mono');
     }
 };

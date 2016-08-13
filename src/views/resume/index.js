@@ -15,20 +15,15 @@ var resumeHtml = MdT.splitByHeading(tokens, 1).reduce((html, section) => {
 
 export default {
     template,
-    route: {
-        data: () => ({
-            resumeHtml
-        })
-    },
     data: () => ({
-        resumeHtml: ''
+        resumeHtml
     }),
-    ready() {
-        this.$dispatch('theme:set', 'cyan');
+    activated() {
+        this.$emit('theme', 'cyan');
     },
     methods: {
         scroll(e) {
-            this.$els.contents.scrollLeft += -e.wheelDelta / 2;
+            this.$refs.contents.scrollLeft += -e.wheelDelta / 2;
         }
     }
 };

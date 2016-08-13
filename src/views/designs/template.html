@@ -1,6 +1,5 @@
-<div class="view" :class="theme">
-    <router-view :data="gallery"></router-view>
-    <div class="view-header">
+<div class="designs-view">
+    <div class="view-header" v-show="!name">
         <div class="view-title">
             Designs
         </div>
@@ -8,7 +7,8 @@
 			Web / UI / UX <br> Magazine / Layout
 		</span>
     </div>
-    <div class="view-content">
+    <div class="view-content" v-show="!name" ref="content" @wheel="scroll">
         <gallery :data="gallery"></gallery>
     </div>
+    <router-view :data="gallery"></router-view>
 </div>

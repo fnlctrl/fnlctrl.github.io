@@ -4,7 +4,7 @@ import gallery from 'gallery';
 export default {
     template,
     components: {gallery},
-    ready() {
-        this.$dispatch('theme:set', 'blue');
+    activated() {
+        this.$emit('theme', 'blue');
     }
 };

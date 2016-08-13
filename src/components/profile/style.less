@@ -1,5 +1,8 @@
-profile {
+.profile {
   display: block;
+  svg {
+    fill: currentColor;
+  }
   .skills {
     h1 {
       font-weight: 500;
@@ -66,8 +69,9 @@ profile {
 
 @media (min-width: 640px) {
   /* sidebar normal */
-  profile {
+  .profile {
     position: fixed;
+    top: 0;
     width: 320px;
     padding: 30px;
     box-sizing: border-box;
@@ -156,16 +160,20 @@ profile {
         color: inherit;
         margin: 10px 6px 0 0;
         opacity: 0.6;
+        height: 25px;
+        width: 25px;
+        svg {
+          height: 100%;
+          width: 100%;
+        }
         &:hover {
           opacity: 1;
-        }
-        object {
-          pointer-events: none;
         }
       }
     }
   }
-  profile.active {
+
+  .profile.active {
     background: rgba(0, 0, 0, 0.3);
     transform: translateX(-176px);
     pointer-events: auto;
@@ -183,9 +191,6 @@ profile {
       img {
         transform: scale(1);
       }
-    }
-    ~ * {
-      transform: translateX(-320px);
     }
   }
 
@@ -206,11 +211,11 @@ profile {
 }
 
 @media (max-width: 640px) {
-  profile {
+  .profile {
     width: 100%;
     padding: 30px;
     box-sizing: border-box;
-    background: rgba(0,0,0,0.2  );
+    background: rgba(0, 0, 0, 0.2);
     .header {
       .avatar {
         float: left;

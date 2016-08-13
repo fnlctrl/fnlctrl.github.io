@@ -1,5 +1,5 @@
-<div class="view view-detail">
-    <div class="close" v-link="back">✕</div>
-    <div class="text" v-if="item">{{{ item.html }}}</div>
-    <div class="images" v-if="item">{{{ item.images }}}</div>
+<div class="detail-view">
+    <router-link tag="div" :to="back" class="close">✕</router-link>
+    <div class="text" v-if="item" v-html="item.html"></div>
+    <div class="images" v-if="item" v-html="item.images"></div>
 </div>

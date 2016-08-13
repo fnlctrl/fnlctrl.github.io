@@ -1,1 +1,6 @@
-<div class="item" v-for="(title, item) in data" @click.capture.prevent="redirect">{{{ item.html }}}</div>
+<div class="gallery">
+    <div class="item"
+         v-for="(item, title) in data"
+         v-html="item.html"
+         @click.capture.prevent="redirect"></div>
+</div>

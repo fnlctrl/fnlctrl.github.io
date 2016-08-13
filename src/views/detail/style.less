@@ -1,10 +1,10 @@
-.view-detail {
+.detail-view {
   background: #fff;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 999;
+  box-sizing: border-box;
   ~ * {
     display: none;
   }
@@ -16,6 +16,7 @@
     line-height: 36px;
     color: #fff;
     cursor: pointer;
+    z-index: 99;
     transition: background 0.3s ease;
     background: rgba(0, 0, 0, 0.5);
     &:hover {
@@ -72,12 +73,19 @@
   }
 }
 
+/* Desktop */
 @media (min-width: 640px) {
-  .view-detail {
+  .detail-view {
+    height: 100%;
+    padding: 50px 50px 50px 100px;
+    position: absolute;
+    overflow: auto;
     .text {
       float: right;
       width: 30%;
       height: 100%;
+      box-sizing: border-box;
+      padding-top: 160px;
     }
     .images {
       float: left;
@@ -93,12 +101,13 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 640px) {
-  .view-detail {
+  .detail-view {
     .close {
       position: fixed;
-      left: 16px;
-      top: 16px;
+      left: 12px;
+      top: 52px;
     }
     .images {
       margin-top: 48px;
