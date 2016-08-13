@@ -19,8 +19,7 @@
     <div class="skills section">
         <h1>Skill Points</h1>
         <div class="item" v-for="(skill, name) in skills" :class="'_'+skill.style.color">
-            <div class="alias" ease-out-2 :class="skill.style.shape">
-                {{skill.alias }}
+            <div class="alias" ease-out-2 :class="skill.style.shape">{{ skill.alias }}
                 <div class="background" ease-out-2></div>
             </div>
             <div class="stars" ease-out-2>
