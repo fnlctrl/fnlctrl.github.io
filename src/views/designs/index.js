@@ -1,5 +1,3 @@
-import './style.less';
-import template from './template.html';
 import MdT from 'md-transform';
 
 import gallery from 'gallery';
@@ -8,7 +6,6 @@ import designs from '../../../documents/designs.md';
 var tokens = MdT.getTokens(designs);
 
 export default {
-    template,
     components: {gallery},
     data: () => ({
         gallery: MdT.splitByHeading(tokens, 1).reduce((newObj, item) => {

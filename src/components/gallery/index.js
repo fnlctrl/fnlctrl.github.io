@@ -1,9 +1,6 @@
-import './style.less';
-import template from './template.html';
 import MdT from 'md-transform';
 
 export default {
-    template,
     props: {
         data: {
             type: Object,

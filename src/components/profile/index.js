@@ -1,10 +1,7 @@
-import './style.less';
-import template from './template.html';
 import skills from './skills.js';
 import contacts from './contacts.js';
 
 export default {
-    template,
     props: {
         value: {
             type: Boolean,

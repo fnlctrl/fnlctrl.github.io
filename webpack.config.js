@@ -39,10 +39,16 @@ module.exports = {
         }]
     },
     resolve: {
-        modulesDirectories: ['src', 'data', 'icons', 'components', 'node_modules', 'lib']
+        modulesDirectories: ['src', 'data', 'icons', 'components', 'node_modules', 'lib'],
+        extensions: ['', '.vue', '.svg', '.js']
     },
     htmlLoader: {
         attrs: ['img:src', 'icon:name']
+    },
+    vue: {
+        loaders: {
+            css: ExtractTextPlugin.extract('css!autoprefixer!less')
+        }
     },
     plugins: [
         new ExtractTextPlugin("[name].css", {allChunks: true})

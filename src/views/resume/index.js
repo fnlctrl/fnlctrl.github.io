@@ -1,5 +1,3 @@
-import './style.less';
-import template from './template.html';
 import MdT from 'md-transform';
 
 import resume from '../../../documents/resume.md';
@@ -14,7 +12,6 @@ var resumeHtml = MdT.splitByHeading(tokens, 1).reduce((html, section) => {
 }, '');
 
 export default {
-    template,
     data: () => ({
         resumeHtml
     }),
