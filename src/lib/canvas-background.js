@@ -3,16 +3,20 @@
  * Original repo: https://github.com/aTool-org/canvas-nest.js
  */
 
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 const config = {
     zIndex: 0,
     opacity: 0.7,
     color: "255,255,255",
-    numPoints: 99
+    numPoints: isMobile ? 33 : 99
 };
 
 const theCanvas = document.createElement("canvas");
 theCanvas.config = config;
-var context = theCanvas.getContext("2d"), canvasWidth, canvasHeight,
+var context = theCanvas.getContext("2d"),
+    canvasWidth,
+    canvasHeight,
     cursorPoint = {
         x: null, //当前鼠标x
         y: null, //当前鼠标y
@@ -23,14 +27,18 @@ theCanvas.style = "position:fixed; pointer-events:none; top:0; left:0; z-index:"
 
 resize();
 window.onresize = resize;
-window.onmousemove = ({clientX, clientY}) => {
-    cursorPoint.x = clientX;
-    cursorPoint.y = clientY;
-};
-window.onmouseout = () => {
-    cursorPoint.x = null;
-    cursorPoint.y = null;
-};
+
+if (!isMobile) {
+    theCanvas.config.numPoints = 40;
+    window.onmousemove = ({clientX, clientY}) => {
+        cursorPoint.x = clientX;
+        cursorPoint.y = clientY;
+    };
+    window.onmouseout = () => {
+        cursorPoint.x = null;
+        cursorPoint.y = null;
+    };
+}
 
 //随机生成config.n条线位置信息
 var randomPoints = [];
@@ -39,8 +47,8 @@ for (let i = 0, points = config.numPoints; i < points; i++) {
     randomPoints.push({
         x: random() * canvasWidth, //随机位置
         y: random() * canvasHeight,
-        xa: 2 * random() - 1, //随机运动方向
-        ya: 2 * random() - 1,
+        xa: (isMobile ? 0.3 : 0.5) * (2 * random() - 1), //随机运动方向
+        ya: (isMobile ? 0.3 : 0.5) * (2 * random() - 1),
         max: 6000 //黏附距离
     });
 }
@@ -67,7 +75,7 @@ function render() {
         context.fillStyle = `rgb(${theCanvas.config.color})` || '#fff';
         context.fillRect(point.x - 0.5, point.y - 0.5, 1, 1); //绘制一个宽高为1的点
         context.beginPath();
-        //context.arc(point.x - 0.5, point.y, 1.5, 0, 2 * Math.PI, false);
+        // context.arc(point.x - 0.5, point.y, 1, 0, 2 * Math.PI, false);
         context.fill();
         for (i = 0; i < all_array.length; i++) {
             e = all_array[i];
