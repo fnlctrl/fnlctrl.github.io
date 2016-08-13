@@ -23,7 +23,7 @@ module.exports = {
             loader: 'vue'
         }, {
             test: /\.(less|css)$/,
-            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
+            loader: ExtractTextPlugin.extract({fallbackLoader: 'style', loader: 'css!autoprefixer!less'})
         }, {
             test: /\.(png|jpg)$/,
             loader: "url"
@@ -39,7 +39,7 @@ module.exports = {
         }]
     },
     resolve: {
-        modulesDirectories: ['src', 'data', 'icons', 'components', 'node_modules', 'lib'],
+        modules: ['src', 'data', 'icons', 'components', 'node_modules', 'lib'],
         extensions: ['', '.vue', '.svg', '.js']
     },
     htmlLoader: {
@@ -51,7 +51,7 @@ module.exports = {
         }
     },
     plugins: [
-        new ExtractTextPlugin("[name].css", {allChunks: true})
+        new ExtractTextPlugin({filename: '[name].css', allChunks: true})
     ],
     devServer: {
         port: 1234,
