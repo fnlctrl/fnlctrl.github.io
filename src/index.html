@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>fnlCtrl's Portfolio</title>
-    <link rel="stylesheet" href="/dist/bundle.css"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117043822-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117043822-1');
+    </script>
 </head>
-<body>
+<body><!-- svg sprite loader -->
+<%= htmlWebpackPlugin.files.sprites['sprite.svg'] %>
 <div id="app"></div>
-<div class="copyright">Copyright (C) 2014-2016 SongShuoyun. All rights reserved.</div>
-<script src="/dist/bundle.js"></script>
+<div class="copyright">Copyright (C) 2014-2017 Song Shuoyun. All rights reserved.</div>
 </body>
 </html>

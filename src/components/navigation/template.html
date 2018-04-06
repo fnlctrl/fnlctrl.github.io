@@ -1,5 +1,5 @@
 <div class="navigation">
-    <router-link class="dot" v-for="view in views" active-class="active" :to="{path: '/' + view}">
+    <router-link class="dot" v-for="view in views" :key="view" active-class="active" :to="{path: '/' + view}">
         <span class="hint">{{ view }}</span>
     </router-link>
 </div>

@@ -1,0 +1,1 @@
+module.exports = ({ symbol }) => `module.exports = '#${symbol.id}'`
